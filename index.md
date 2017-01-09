@@ -1,3 +1,7 @@
+---
+payout: basic
+---
+
 # Finance 6470: Derivatives Markets 
 
 
