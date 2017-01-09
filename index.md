@@ -59,12 +59,6 @@ This course aligns with the Huntsman School Pillars along the dimension of analy
 ### Assessment 
 
 
-### Format and Attendance
-
-
-### Python and C++ Programming
-
-
 ### Topics (Subject to Change)
 
 
