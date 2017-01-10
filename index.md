@@ -61,15 +61,15 @@ This course aligns with the Huntsman School Pillars along the dimension of analy
 
 There is only one _required_ textbook for this course:
 
-* [Derivatives Markets 3rd Edition](goo.gl/b5WRVT) by Robert McDonald.
+* [Derivatives Markets 3rd Edition](https://goo.gl/sB5UWA) by Robert McDonald.
 
 I will also use some other books for some lecture material. Some of these other books are the following:
 
-* [Options, Futures, and Other Derivatives 9th Edition](goo.gl/qnRwxb) by John Hull (sometimes called the bible of option pricing)
+* [Options, Futures, and Other Derivatives 9th Edition](https://goo.gl/qnRwxb) by John Hull (sometimes called the bible of option pricing)
 
-* [Risk Transfer](goo.gl/w50IIN) by Christopher Culp (a gem of a book with a fresh perspective)
+* [Risk Transfer](https://goo.gl/w50IIN) by Christopher Culp (a gem of a book with a fresh perspective)
 
-* [The Economic Function of Futures Markets](goo.gl/01pzn3) by Jeffrey Williams (entirely mind-bending perspective)
+* [The Economic Function of Futures Markets](https://goo.gl/01pzn3) by Jeffrey Williams (entirely mind-bending perspective)
 
 There will also be several assigned academic journal articles, which I will post on the course Google Drive. 
 
