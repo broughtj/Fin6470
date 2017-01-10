@@ -32,7 +32,7 @@ payout: basic
 
 ### Course Description
 
-This course covers the economics of futures, futures, options, and swaps. By the end of the course, you will have a solid knowledge of how these products work, how they are used, how they are priced, how financial institutions trade them to hedge and speculate, as well as of the markets in which they trade. 
+This course covers the economics of futures, futures, options, and swaps. By the end of the course, you will have a solid knowledge of how these products work, how they are used, how they are priced, how financial institutions trade them to hedge and speculate, as well as of the markets in which they trade. The single biggest idea from this class is arbitrage. We will discuss the concept of arbitrage deeply as it applies to financial derivatives, but  also as it applies much more broadly.
 
 
 ### Course Objectives
@@ -59,10 +59,59 @@ This course aligns with the Huntsman School Pillars along the dimension of analy
 
 ### Textbooks
 
+There is only one _required_ textbook for this course:
 
-### Assessment 
+* [Derivatives Markets 3rd Edition](goo.gl/b5WRVT) by Robert McDonald.
+
+I will also use some other books for some lecture material. Some of these other books are the following:
+
+* [Options, Futures, and Other Derivatives 9th Edition](goo.gl/qnRwxb) by John Hull (sometimes called the bible of option pricing)
+
+* [Risk Transfer](goo.gl/w50IIN) by Christopher Culp (a gem of a book with a fresh perspective)
+
+* [The Economic Function of Futures Markets](goo.gl/01pzn3) by Jeffrey Williams (entirely mind-bending perspective)
+
+There will also be several assigned academic journal articles, which I will post on the course Google Drive. 
+
+##e Assessment 
+
+The grade that you will earn will be determined by your ranking in the class based on the weighted total points
+accumulated on class preparation and participation, as well as on exams. There is not predetermined percentage of the
+class that will get an A or that will fail. If you all do excellent work, you will all earn exceptional grades. The
+weights given to each part of the class are as follows:
+
+* Class Preparation, Participation, and Homework (30%) - I expect each student to come prepared for each class
+  session. Preparation includes completing the assigned readings, writing down questions for section of the reading
+  that were not fully understood or internalized, and completing homework assignments. Class participation is crucial
+  for understanding. I will call on students in class. There are always two good answers based on your preparation.
+	The first correct response is an informed answer based on your preparation. The second correct response is a
+	question that shows that you have wrestled with the material in your preparations. A good question often lays the
+	foundation for a more complete understanding. One important aspect of class participation is the professionalism
+	with which you conduct yourself. I will drop your lowest homework assignment and replace it with the average of
+	the others, BUT only if I deem it of sufficient quality and effort.
+
+* Midterm Exam (35%) - The midterm will be a tradition in-class exam. You are allowed a single sheet of notes for the
+  exam.
+
+* Final Exam (35%) - The final exam will a take-home final exam. We will discuss it more later. 
 
 
 ### Topics (Subject to Change)
 
+We will cover three broad modules:
 
+* ___Module I:___ Economic Foundations: Arbitrage concepts, The Law of One Price, Equilibrium  concepts
+
+* ___Module II:___ Forwards, Futures, and Swaps (hedging, speculation, trading)
+
+* ___Module III:___ Options and dynamic trading
+
+
+<br>
+
+Import dates:
+
+* __Feb 21__ - Monday Schedule
+* __Mar 6 - 10__ - Spring break
+* __Apr 28__ - Last day of classes
+* __May 1-5__ - Final exams
