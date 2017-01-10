@@ -61,15 +61,15 @@ This course aligns with the Huntsman School Pillars along the dimension of analy
 
 There is only one _required_ textbook for this course:
 
-* [Derivatives Markets 3rd Edition](https://goo.gl/sB5UWA) by Robert McDonald.
+* [Derivatives Markets 3rd Edition][McDonald] by Robert McDonald.
 
 I will also use some other books for some lecture material. Some of these other books are the following:
 
-* [Options, Futures, and Other Derivatives 9th Edition](https://goo.gl/qnRwxb) by John Hull (sometimes called the bible of option pricing)
+* [Options, Futures, and Other Derivatives 9th Edition][Hull] by John Hull (sometimes called the bible of option pricing)
 
-* [Risk Transfer](https://goo.gl/w50IIN) by Christopher Culp (a gem of a book with a fresh perspective)
+* [Risk Transfer][Culp] by Christopher Culp (a gem of a book with a fresh perspective)
 
-* [The Economic Function of Futures Markets](https://goo.gl/01pzn3) by Jeffrey Williams (entirely mind-bending perspective)
+* [The Economic Function of Futures Markets][Williams] by Jeffrey Williams (entirely mind-bending perspective)
 
 There will also be several assigned academic journal articles, which I will post on the course Google Drive. 
 
@@ -115,3 +115,9 @@ Import dates:
 * __Mar 6 - 10__ - Spring break
 * __Apr 28__ - Last day of classes
 * __May 1-5__ - Final exams
+
+
+[McDonald]: https://www.amazon.com/Derivatives-Markets-3rd-Pearson-Finance/dp/0321543084/ref=sr_1_1?ie=UTF8&qid=1484071179&sr=8-1&keywords=derivatives+markets
+[Hull]: https://www.amazon.com/Options-Futures-Other-Derivatives-9th/dp/0133456315/ref=sr_1_1?s=books&ie=UTF8&qid=1484071372&sr=1-1&keywords=options+futures+and+other+derivatives
+[Culp]: https://www.amazon.com/Risk-Transfer-Derivatives-Practice-Finance-ebook/dp/B00D57IIV8/ref=sr_1_4?s=books&ie=UTF8&qid=1484071386&sr=1-4&keywords=risk+transfer
+[Williams]: https://www.amazon.com/Economic-Function-Futures-Markets/dp/0521389348/ref=pd_rhf_dp_p_img_3?_encoding=UTF8&psc=1&refRID=G37G1D4SMRA3Q2R0ED8E
