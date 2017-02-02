@@ -117,6 +117,62 @@ F_{0,T} = S_{0} e^{(r - \delta)T}
 $$
 
 
+## Pricing Forwards on Stock (cont'd)
+
+- Forward premium 
+	- The difference between current forward price and stock price
+	- Can be used to infer the current stock price from forward price
+	- Definition:
+		+ Forward premium: $F_{0,T} / S_{0}$
+		+ Annualized forward premium = $(1/T) \ln{(F_{0,T}/S_{0})}$
+
+
+## Creating a Synthetic Forward
+
+- One can offset the risk of a forward by creating a _synthetic_ forward to offset a 
+  position in the actual forward contract
+- How can one do this? (assume continuous dividends at rate $\delta$)
+	- Recall the long forward payoff at expiration = $S_{T} - F_{0,T}$
+	- Borrow and purchase shares as follows
+
+\begin{center}
+ \includegraphics[width=6cm, height=2.5cm]{images/Picture3.png}
+\end{center}
+
+- Note that the total payoff at expiration is same as forward premium
+
+
+## Creating a Synthetic Forward (cont'd)
+
+- The idea of creating synthetic forward leads to following
+	- Forward = Stock - zero-coupon bond
+	- Stock = Forward - zero-coupon bond
+	- Zero-coupon bond = Stock - forward
+- Cash-and-Carry arbitrage: Buy the index, short the forward
+
+\begin{center}
+ \includegraphics[width=7cm, height=2.5cm]{images/Picture4.png}
+\end{center}
+
+
+
+## Creating a Synthetic Forward (cont'd) 
+
+- Cash-and-carry arbitrage with transaction costs
+	- Trading fees, bid-ask spreads, different
+	  borrowing/lending rates, the price effect of trading in 
+	  large quantities, make arbitrage harder
+	- Suppose
+		+ Bid-ask spreads: for stock $S^{b} < S^{a}$, and for forward $F^{b} < F^{a}$
+		+ Cost $k$ of transacting forward
+		+ Interest rate for borrowing and lending are $r^{b} < r^{l}$
+		+ No dividends and no time $T$ transaction costs for simplicity
+	- Arbitrage possible if
+		+ $F^{b} > F^{+} = (S_{0}^{a} + 2k) e^{r^{b}T}$
+		+ $F^{a} < F^{-} = (S_{0}^{b} - 2k) e^{r^{l}T}$
+
+
+
 # Section 5.4 Futures Contracts
 
 
