@@ -172,8 +172,36 @@ $$
 		+ $F^{a} < F^{-} = (S_{0}^{b} - 2k) e^{r^{l}T}$
 
 
+## Other Issues in Forward Pricing
+
+- Does the forward price predict the future price?
+	- According to the formula $F_{0,T} = S_{0} e^{-(r-\delta)T}$ the forward
+	  price conveys no additional information beyond what $S_{0}$, $r$, and $\delta$ provides
+	- Moreover, the forward price underestimates the future stock price
+- Forward pricing formula and cost of carry
+
+$$
+\mbox{Forward Price} = \mbox{Spot Price} + \underbrace{\mbox{Interest to carry the asset} - \mbox{asset lease
+rate}}_{\mbox{Cost of carry}, \quad (r - \delta) S} 
+$$
+
+
 
 # Section 5.4 Futures Contracts
+
+## Futures Contracts
+
+- Exchange-traded "forward contracts"
+- Typically features of futures contracts
+	- Standardized, with specified delivery dates, locations, procedures
+	- A clearinghouse
+		+ Matches buy and sell orders
+		+ Keeps track of members' obligations and payments
+		+ After matching the trades, becomes counterparty
+- Differences from forward contracts
+	- Settled daily through the mark-to-market process $\rightarrow$ low credit risk
+	- Highly liquid $\rightarrow$ easier to offset an existing position
+	- Highly standardized structure $\rightarrow$ harder to customize
 
 
 # Section 5.5 Uses of Index Futures
