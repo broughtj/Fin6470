@@ -5,7 +5,7 @@
 ## Chapter 11: Time Series Models
 
 These notes are based on Chapter 11 of the book [Mathematics & Statistics for Financial Risk
-Management]() by Michael Miller.
+Management](https://goo.gl/BVnAFe) by Michael Miller.
 
 \vspace{5mm}
 ___Time Series___: an equation or set of equations describing how a random variable or variables evolve(s)
