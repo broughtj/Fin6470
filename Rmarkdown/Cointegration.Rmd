@@ -1,0 +1,129 @@
+---
+title: "Cointegration"
+author: "Tyler J. Brough"
+date: "12/3/2016"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Introduction: Cointegration Notes
+
+These notes are based on material from several sources:
+
+* Chapter 22 of Greene
+* Chapter 19 of Kennedy
+* Chapter 11 in Cochrane
+* Chapter 8 in Brooks
+
+
+# A Monte Carlo Study to Demonstrate Spurious Regression
+
+## Spurious Regression
+
+Consider the following two ___independent___ unit-root nonstationary processes:
+
+$$
+\begin{align}
+y_{1,t} &= y_{1,t-1} + u_{t} \\
+y_{2,t} &= y_{2,t-1} + v_{t} 
+\end{align}
+$$
+
+with $E(u_{t}, v_{s}) = 0$ for every $t,s$. 
+
+<br>
+
+A regression on one of these series on the other, such as:
+
+$$
+y_{1,t} = \alpha + \beta y_{2,t} + \varepsilon_{t}
+$$
+
+_NB:_ we expect the $t$-statistic to fail to reject the null $H_{0}: \beta = 0$, give their independence.
+
+
+## Monte Carlo Simulation
+
+But if either or both (as in this case!) of $y_{1,t}$ or $y_{2,t}$ is a unit-root process this regression violates the
+assumptions of the CLRM and will result in spurious results. 
+
+<br>
+
+To illustrate this, consider the following Monte Carlo simulation:
+
+1. Simulate an articifial dataset consisting of 500 observations from the processes given above.
+2. Regress $y_{1,t}$ on $y_{2,t}$ and store the resulting $R^{2}$ and $t$-ratio.
+3. Repeat this process for $i = 1, 2, \cdots, M$ with $M = 10,000$.
+4. Plot histograms of the $M$ $R^{2}$'s and $t$-ratios. 
+
+
+## The R Code
+
+```{r message=FALSE, warnings=FALSE}
+M <- 10000
+T <- 500
+
+rsqrd <- rep(0, M)
+tstat <- rep(0, M)
+
+for(i in 1:M)
+{
+	y <- cumsum(rnorm(T))
+	x <- cumsum(rnorm(T))
+	fit <- lm(y ~ x)
+	rsqrd[i] <- summary(fit)$r.squared
+	tstat[i] <- summary(fit)$coefficients[2,3]
+}
+
+hist(rsqrd, breaks = 100, col="blue", main = "Histogram of Simulated R^{2}")
+hist(tstat, breaks = 100, col="blue", main = "Histogram of Simulated t-ratio")
+```
+
+
+## Cointegration $\phantom{Page 1 of ECN7320 Notes Dated 03/01/2011}$
+
+Cointegration is a generalization of unit roots to vector systems. 
+
+__Definition:__ Suppose that two time series are each integrated, i.e. have unit roots, and hence have the following
+moving average representations:
+
+$$
+\begin{align}
+(1 - L)y_{t} &= a(L)\delta_{t} \\
+(1 - L)w_{t} &= b(L)v_{t} 
+\end{align}
+$$
+
+
+## $\phantom{Page 2}$
+
+In general linear combinations of $y$ and $w$ also have unit roots. 
+
+<br>
+
+If however, there is some linear combination, say
+
+$$
+y_{t} = \alpha w_{t}
+$$
+
+that is stationary, $y_{t}$ and $w_{t}$ are said to be ___cointegrated___, and $[1 - \alpha]$ is their ___cointegrating
+vector___.
+
+
+## Some Plausible Examples $\phantom{These plots and data inserted. Not in original notes.}$
+
+Consider the daily closing log-prices for Coke and Pepsi for 2015, shown below.
+
+```{r message=FALSE, warnings=FALSE, code=readLines("plot-coke-pepsi.R")}
+```
+
+## 
+
+Consider the bid and ask prices for GOOG for a few hours from a single trading day.
+
+```{r message=FALSE, warnings=FALSE, code=readLines("plot-goog-bid-ask.R")}
+```
+
+
