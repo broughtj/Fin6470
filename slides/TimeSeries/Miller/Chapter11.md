@@ -252,4 +252,45 @@ r_{t-p}$ to approach zero
 
 Using some results from geometric series, we can write the mean and variance
 
+\begin{eqnarray*}
+ E[r_{t}]   &=& \frac{1}{1 - \rho} \alpha \\
+ Var[r_{t}] &=& \frac{1}{1 - \rho} \sigma^{2}
+\end{eqnarray*}
+
+\vspace{5mm}
+For values of $\left| \rho \right|$ less than one, as $n$ approaches infinity, the initial state of the system ceases to matter. The mean and variance are only a function of the constants.
+
+
+## Stationarity
+
+We say that a random variable $X$ is stationary if for all $t$ and $n$:
+
+\vspace{5mm}
+\begin{eqnarray*}
+ E[x_{t}] &=& \mu \quad \mbox{and} \quad \left| \mu \right| < \infty \\
+ Var[x_{t}] &=& \sigma^{2} \quad \mbox{and} \quad \left| \sigma^{2} \right| < \infty \\
+ Cov[x_{t},x_{t-n}] &=& \sigma_{t,t-n}
+\end{eqnarray*}
+
+\vspace{2.5mm}
+where $\mu$, $\sigma^{2}$, and $\sigma_{t,t-n}$ are constants.
+
+
+## Moving Average
+
+Besides $AR(p)$ models, the other major class of time series models is moving average models. An $MA(q)$ sereis takes the form:
+
+\begin{equation*}
+ x_{t} = u_{t} + \theta_{1} u_{t-1} + \cdots + \theta_{q} u_{t-q}
+\end{equation*}
+
+\vspace{5mm}
+We can combine the two to form the $ARMA(p,q)$ model as well:
+
+\begin{equation*}
+ x_{t} = \rho_{1} x_{t-1} + \rho_{2} x_{t-2} + \cdots + \rho_{p} x_{t-p} + u_{t} + \theta_{1} u_{t-1} + \cdots + \theta_{q} u_{t-q}
+\end{equation*}
+
+
+
 
