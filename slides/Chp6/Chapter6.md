@@ -381,7 +381,7 @@
 ##
 
 \begin{center}
- \includegraphics[width=9cmd, height=4cm]{images/figure6-7.png}
+ \includegraphics[width=9cm, height=4cm]{images/figure6-7.png}
 \end{center}
 
 
