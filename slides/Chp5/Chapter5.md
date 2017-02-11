@@ -155,7 +155,6 @@ $$
 \end{center}
 
 
-
 ## Creating a Synthetic Forward (cont'd) 
 
 - Cash-and-carry arbitrage with transaction costs
@@ -204,15 +203,9 @@ $$
 	- Highly standardized structure $\rightarrow$ harder to customize
 
 
-## 
 
 
-# Section 5.5 Uses of Index Futures
 
 
-# Section 5.6 Currency Contracts
-
-
-# Section 5.7 Eurodollar Futures
 
 
