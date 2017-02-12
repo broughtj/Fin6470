@@ -1,6 +1,6 @@
-__Finance 6470: Derivatives Markets__
-McDonald Chapter 5 Homework
-February 11, 2017
+__Finance 6470: Derivatives Markets__ <br>
+McDonald Chapter 5 Homework           <br>
+February 11, 2017                     <br>
 
 <br>
 
