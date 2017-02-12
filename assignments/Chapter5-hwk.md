@@ -2,6 +2,8 @@
 % McDonald Chapter 5 Homework
 % February 11, 2017
 
+__Due Date:__ Tuesday, Feb. 21, 2017. 
+
 For your homework from Chapter 5, please complete the following problems from the Problems section (p. 158):
 
 1. 5.1, 5.2, 5.3, 5.4
