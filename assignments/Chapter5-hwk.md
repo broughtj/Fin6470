@@ -1,6 +1,8 @@
-% Finance 6470: Derivatives Markets
-% McDonald Chapter 5 Homework
-% February 11, 2017
+__Finance 6470: Derivatives Markets__
+McDonald Chapter 5 Homework
+February 11, 2017
+
+<br>
 
 __Due Date:__ Tuesday, Feb. 21, 2017. 
 
