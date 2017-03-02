@@ -73,7 +73,7 @@ I will also use some other books for some lecture material. Some of these other 
 
 There will also be several assigned academic journal articles, which I will post on the course Google Drive. 
 
-##e Assessment 
+### Assessment 
 
 The grade that you will earn will be determined by your ranking in the class based on the weighted total points
 accumulated on class preparation and participation, as well as on exams. There is not predetermined percentage of the
