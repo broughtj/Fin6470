@@ -87,7 +87,7 @@ via a desktop browser.
 
 ### Schedule of Topics
 
-The weekly schecule will be updated on the course [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1sx6SvNoKovQYmTHy7Vl13rGLtnckNkdVmWKaC-GxbUM/edit?usp=sharing) 
+The weekly schedule will be updated on the course [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1sx6SvNoKovQYmTHy7Vl13rGLtnckNkdVmWKaC-GxbUM/edit?usp=sharing) 
 
 
 

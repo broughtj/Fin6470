@@ -1,0 +1,327 @@
+\documentclass[10pt,ignorenonframetext,,aspectratio=149]{beamer}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+
+% Comment these out if you don't want a slide with just the
+% part/section/subsection/subsubsection title:
+\AtBeginPart{
+  \let\insertpartnumber\relax
+  \let\partname\relax
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \let\insertsectionnumber\relax
+  \let\sectionname\relax
+  \frame{\sectionpage}
+}
+\AtBeginSubsection{
+  \let\insertsubsectionnumber\relax
+  \let\subsectionname\relax
+  \frame{\subsectionpage}
+}
+
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+\title{Finance 6470 - Derivatives Markets}
+\subtitle{Chapter 1 - Introduction to Derivatives}
+\author{Tyler J. Brough}
+\date{}
+
+%% Here's everything I added.
+%%--------------------------
+
+\usepackage{graphicx}
+\usepackage{rotating}
+%\setbeamertemplate{caption}[numbered]
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage[normalem]{ulem}
+%\mode<presentation>
+\usepackage{wasysym}
+%\usepackage{amsmath}
+
+
+% Get rid of navigation symbols.
+%-------------------------------
+\setbeamertemplate{navigation symbols}{}
+
+% Optional institute tags and titlegraphic.
+% Do feel free to change the titlegraphic if you don't want it as a Markdown field.
+%----------------------------------------------------------------------------------
+\institute{Department of Finance and Economics}
+
+% \titlegraphic{\includegraphics[width=0.3\paperwidth]{\string~/Dropbox/teaching/clemson-academic.png}} % <-- if you want to know what this looks like without it as a Markdown field. 
+% -----------------------------------------------------------------------------------------------------
+\titlegraphic{\includegraphics[width=0.3\paperwidth]{\string~./images/vertical-logo-blue.png}}
+
+% Some additional title page adjustments.
+%----------------------------------------
+\setbeamertemplate{title page}[empty]
+%\date{}
+\setbeamerfont{subtitle}{size=\small}
+
+\setbeamercovered{transparent}
+
+% Some optional colors. Change or add as you see fit.
+%---------------------------------------------------
+\definecolor{clemsonpurple}{HTML}{522D80}
+% \definecolor{clemsonorange}{HTML}{EA6A20}
+ \definecolor{clemsonorange}{HTML}{F66733}
+\definecolor{uiucblue}{HTML}{003C7D}
+\definecolor{uiucorange}{HTML}{F47F24}
+%\definecolor{usublue}{HTML}{2D3280}
+%\definecolor{usublue}{HTML}{000066}
+%\definecolor{usublue}{HTML}{273849}
+%\definecolor{usublue}{HTML}{78281F}
+%\definecolor{usublue}{HTML}{A04000}
+
+
+%\definecolor{usublue}{HTML}{3498DB}
+%\definecolor{bluegray}{HTML}{334760}
+\definecolor{usublue}{HTML}{C0392B}
+\definecolor{bluegray}{HTML}{34495E}
+
+\definecolor{gray}{HTML}{446280}
+
+% Some optional color adjustments to Beamer. Change as you see fit.
+%------------------------------------------------------------------
+%\setbeamercolor{frametitle}{fg=clemsonpurple,bg=white}
+\setbeamercolor{frametitle}{fg=usublue,bg=white}
+\setbeamercolor{title}{fg=usublue,bg=white}
+\setbeamercolor{local structure}{fg=usublue}
+\setbeamercolor{section in toc}{fg=usublue,bg=white}
+% \setbeamercolor{subsection in toc}{fg=clemsonorange,bg=white}
+\setbeamercolor{footline}{fg=usublue!50, bg=white}
+\setbeamercolor{block title}{fg=gray,bg=white}
+
+
+\let\Tiny=\tiny
+
+
+% Sections and subsections should not get their own damn slide.
+%--------------------------------------------------------------
+\AtBeginPart{}
+\AtBeginSection{}
+\AtBeginSubsection{}
+\AtBeginSubsubsection{}
+
+% Suppress some of Markdown's weird default vertical spacing.
+%------------------------------------------------------------
+\setlength{\emergencystretch}{0em}  % prevent overfull lines
+\setlength{\parskip}{0pt}
+
+
+% Allow for those simple two-tone footlines I like. 
+% Edit the colors as you see fit.
+%--------------------------------------------------
+\defbeamertemplate*{footline}{my footline}{%
+    \ifnum\insertpagenumber=1
+    \hbox{%
+        \begin{beamercolorbox}[wd=\paperwidth,ht=.8ex,dp=1ex,center]{}%
+      % empty environment to raise height
+        \end{beamercolorbox}%
+    }%
+    \vskip0pt%
+    \else%
+        \Tiny{%
+            \hfill%
+		\vspace*{1pt}%
+            \insertframenumber/\inserttotalframenumber \hspace*{0.1cm}%
+            \newline%
+            \color{usublue}{\rule{\paperwidth}{0.4mm}}\newline%
+            \color{bluegray}{\rule{\paperwidth}{.4mm}}%
+        }%
+    \fi%
+}
+
+% Various cosmetic things, though I must confess I forget what exactly these do and why I included them.
+%-------------------------------------------------------------------------------------------------------
+\setbeamercolor{structure}{fg=blue}
+\setbeamercolor{local structure}{parent=structure}
+\setbeamercolor{item projected}{parent=item,use=item,fg=usublue,bg=white}
+\setbeamercolor{enumerate item}{parent=item}
+
+% Adjust some item elements. More cosmetic things.
+%-------------------------------------------------
+\setbeamertemplate{itemize item}{\color{usublue}$\bullet$}
+\setbeamertemplate{itemize subitem}{\color{usublue}\scriptsize{$\bullet$}}
+\setbeamertemplate{itemize/enumerate body end}{\vspace{.6\baselineskip}} % So I'm less inclined to use \medskip and \bigskip in Markdown.
+
+% Automatically center images
+% ---------------------------
+% Note: this is for ![](image.png) images
+% Use "fig.align = "center" for R chunks
+
+\usepackage{etoolbox}
+
+\AtBeginDocument{%
+  \letcs\oig{@orig\string\includegraphics}%
+  \renewcommand<>\includegraphics[2][]{%
+    \only#3{%
+      {\centering\oig[{#1}]{#2}\par}%
+    }%
+  }%
+}
+
+% I think I've moved to xelatex now. Here's some stuff for that.
+% --------------------------------------------------------------
+% I could customize/generalize this more but the truth is it works for my circumstances.
+
+\ifxetex
+\setbeamerfont{title}{family=\fontspec{serif}}
+\setbeamerfont{frametitle}{family=\fontspec{serif}}
+\usepackage[font=small,skip=0pt]{caption}
+ \else
+ \fi
+
+% Okay, and begin the actual document...
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+
+\end{frame}
+
+\section{Chapter 1: Introduction to
+Derivatives}\label{chapter-1-introduction-to-derivatives}
+
+\begin{frame}{What is a Derivative?}
+
+\begin{itemize}
+\item
+  \textbf{Definition:} a financial instrument that has a value
+  determined by the price of something else
+\item
+  An agreement where you pay \(\$1\) if the price of corn is greater
+  than \(\$3\) and receive \(\$1\) if the price of corn is less than
+  \(\$1\) is a derivative
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This contract can be used to speculate on the price of corn or it
+    can be used to reduce risk. It is not the contract itself, but how
+    it used, and who uses it, that determines whether or not it is
+    risk-reducing.
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{An Overview of Financial Markets}
+
+The trading of a financial asset involves at least four discrete steps:
+
+\begin{itemize}
+\item
+  A buyer and a sellter must locate one another and agree on a price
+\item
+  The trade must be \emph{cleared} (the obligations of each party are
+  specified)
+\item
+  The trade must be \emph{settled} (the buyer and the seller must
+  deliver the cash or securities necessary to satisfy their obligations
+  in the required period of time)
+\item
+  Ownership records are updated
+\end{itemize}
+
+\vspace{3mm}
+
+\textbf{\emph{NB:}} notice that well-defined property rights are an
+assumption of properly functioning capital markets.
+
+\end{frame}
+
+\begin{frame}{An Overview of Financial Markets (Continued)}
+
+\begin{itemize}
+\item
+  Much trading of financial claims takes place on organized exchanges.
+  In the past, the exchange was solely a physical location where traders
+  would buy and sell. Such in-person venues have largely been replaced
+  by electronic networks that provide a virtual trading venue.
+\item
+  After a trade has taken place, a \textbf{clearinghouse} matches the
+  buyers and sellers, keeping track of their obligations and payments.
+  To facilitate these payments and to help manage credit risk, a
+  derivatives clearinghouse typically imposes itself in the transaction,
+  becoming the buyer to all sellers and the seller to all buyers.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{An Overview of Financial Markets (Continued)}
+
+\begin{itemize}
+\item
+  It is possible for large traders to trade many financial claims
+  directly with a dealer bypassing organized exchanges. Such trading is
+  said to occur in the \textbf{over-the-counter} (OTC) market
+\item
+  Exchange activity is public and highly regulated
+\item
+  OTC trading is not easy to observe or measure and is generally less
+  regulated
+\item
+  For many categories of financial claims, the value of OTC trading is
+  greater than the value traded on exchanges.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{An Overview of Financial Markets (Continued)}
+
+There are at least four different measures of a market and its activity
+
+\begin{itemize}
+\item
+  \textbf{Trading volume}. This measure counts the number of financial
+  claims that change hands
+\item
+  \textbf{Market value}. The market value is the sum of the market value
+  of the claims that \emph{could} be traded, without regard to whether
+  they have traded
+\item
+  \textbf{Notional value}. Notional value measure the \emph{scale} of a
+  position, usually with reference to some underlying asset
+\item
+  \textbf{Open Interest}. Open interest measures the total number of
+  contracts for which counterparties have a future obligation to perform
+\end{itemize}
+
+\end{frame}
+
+
+\section[]{}
+\frame{\small \frametitle{Table of Contents}
+\tableofcontents}
+\end{document}
