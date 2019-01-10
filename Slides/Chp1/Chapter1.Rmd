@@ -69,6 +69,7 @@ padding-bottom: 10px;
 
 # Chapter 1: Introduction to Derivatives
 
+
 ## What is a Derivative? 
 
 * __Definition:__ a financial instrument that has a value determined by the price of something else
@@ -144,7 +145,161 @@ There are at least four different measures of a market and its activity
   have a future obligation to perform
 
 
+## Derivatives Markets
+
+The introduction of derivatives markets in a market often coincides with an increase in 
+price risk in that market
+
+* Currencies were permitted to float in 1971 when the gold standard was officially
+  abandoned. The modern market in financial derivatives begain in 1972, when the 
+  Chicago Mercantile Exchange started trading futures contracts on seven currencies.
+
+* OPEC's 1973 reduction in the supply of oil was followed by high and variable 
+  oil prices
+
+* U.S. interest rates became more volatile following inflation and recessions in
+  the 1970s
+
+* The market for natural gas has been deregulated gradually since 1978, resulting in 
+  a volatile market in recent years
+
+* The deregulation of electricity began during the 1990s
 
 
+## Increased Volatility ...
 
+* Oil prices 1947-2011
+
+\includegraphics[scale=0.3]{./images/Picture1.png}
+
+\vspace{5mm}
+
+* Dollar/Euro rate 1947-2011
+
+\includegraphics[scale=0.3]{./images/Picture2.png}
+
+
+## ... Led to New and Big Markets
+
+* Exchange-traded derivatives
+
+\includegraphics[scale=0.5]{./images/Picture7.png}
+
+* Over-the-counter markets have also grown rapidly over this period
+
+
+## Exchange Traded Contracts
+
+Contracts proliferated in the last four decades
+
+\vspace{3mm}
+
+\includegraphics[width=0.7\textwidth]{./images/Picture3.png}
+
+
+## The Role of Financial Markets
+
+* Insurance companies and individual communities/families have
+  traditionally helped each other to share risks
+
+* Markets make risk-sharing more efficient
+	- Diversifiable risks vanish
+	- Non-diversifiable risks are reallocated to those most willing to hold it
+
+
+## The Uses of Derivatives
+
+(Some) Uses for derivative contracts
+
+* __Risk management__. Derivatives are a tool for companies and other users to reduce risks
+
+* __Speculation__. Derivatives can serve as investment vehicles
+
+* __Reduce transaction costs__. Sometimes derivatives provide a lower cost way to 
+  undertake a particular financial transaction
+
+* __Regulatory arbitrage__. It is sometimes possible to circumvent regulatory restrictions,
+  taxes, and accounting rules by trading derivatives
+
+
+## Perspectives on Derivatives
+
+* End users
+	- Corporations
+	- Investment managers
+	- Investors
+
+* Intermediaries
+	- Market-makers
+	- Traders
+
+
+* Economic observers
+	- Regulators
+	- Researchers
+
+
+## Financial Engineering and Security Design
+
+* The construction of a financial product from other products
+
+* New securities can be designed by using existing securities
+
+* Financial engineering principles
+	- Facilitate hedging of existing positions
+	- Allow for creation of customized products
+	- Enable understanding of complex positions
+	- Render regulation less effective
+
+
+## Transaction Costs and the Bid-Ask Spread
+
+* Buying and selling a financial asset 
+	- Brokers: commissions
+	- Market-makers: bid-ask (offer) spread
+
+* Example 1.1: Buy and sell 100 shares of XYZ
+	- XYZ: bid $= \$49.75$, offer $= \$50$, commission $= \$15$
+	- Buy: $(100 \times \$50) +  \$15 = \$5,015$
+	- Sell: $(100 \times \$49.75) - \$15 = \$4,960$
+	- Transaction cost: $\$5,015 - \$4,960 = \$55$
+
+
+## Short-Selling
+
+* When the price of an asset is expected to fall
+	- First: borrow and sell an asset (get $\$\$$)
+	- Then: buy back and return the asset (pay $\$$)
+	- If price fell in the mean time: Profit $\$ = \$\$ - \$$
+	- The lender must be compensated for dividends received (lease-rate)
+
+* Example: short-sell IBM stock for 90 days
+
+\includegraphics[width=0.7\textwidth]{./images/Picture4.png}
+
+
+## Short-Selling (Continued)
+
+* Why short-sell?
+	- Speculation
+	- Financing
+	- Hedging
+
+* Credit risk in short-selling
+	- Collateral and "haircut"
+
+* Interest received from lender on collateral
+	- Scarcity decreases the interest rate
+	- Repo rate in bond markets
+	- Short rebate in the stock market
+
+
+## 
+
+\includegraphics[width=\textwidth]{./images/Picture5.png}
+
+
+## 
+
+\includegraphics[width=\textwidth]{./images/Picture6.png}
 
