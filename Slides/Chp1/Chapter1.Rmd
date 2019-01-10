@@ -9,11 +9,8 @@ output:
  beamer_presentation:
     template: ./beamer-template.tex
     keep_tex: true
-# toc: true
+ # toc: false
     slide_level: 2
- ioslides_presentation:
-    smaller: true
-#    logo: ~/Dropbox/teaching/clemson-paw-transparent.png
 make149: true
 ---
 
@@ -67,8 +64,7 @@ padding-bottom: 10px;
 </style>
 
 
-# Chapter 1: Introduction to Derivatives
-
+\section{Chapter 1: Introduction to Derivatives}
 
 ## What is a Derivative? 
 
