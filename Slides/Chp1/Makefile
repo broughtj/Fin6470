@@ -14,4 +14,4 @@ slidy:
 
 
 clean:
-	rm Chapter1.pdf Chapter1.html
+	rm Chapter1.pdf Chapter1.html Chapter1.tex
