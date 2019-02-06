@@ -1,0 +1,79 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{Boettke1997}
+P.~J. Boettke, ``Where did economics go wrong? modern economics as a flight
+  from reality,'' \emph{Critical Review}, vol.~11, no.~1, pp. 11--64, 1997.
+ \begin{quotation}\noindent Your annotation summary goes here. \end{quotation}
+
+\bibitem{Boettke2002}
+------, ``Information and knowledge: Austrian economics in search of its
+  uniqueness,'' \emph{The Review of Austrian Economics}, vol.~15, no.~4, pp.
+  263--274, 2002.
+ \begin{quotation}\noindent Your annotation summary goes here. \end{quotation}
+
+\bibitem{Culp2009}
+C.~L. Culp, ``The social functions of financial derivatives,'' in
+  \emph{Financial Derivatives: Pricing and Risk Management}.\hskip 1em plus
+  0.5em minus 0.4em\relax John Wiley \& Sons, 2009.
+ \begin{quotation}\noindent Your annotation summary goes here. \end{quotation}
+
+\bibitem{Culp2011b}
+------, ``Appendix 1: Economic theory and equilibrium,'' in \emph{Risk
+  Transfer: Derivatives in Theory and Practice}.\hskip 1em plus 0.5em minus
+  0.4em\relax John Wiley \& Sons, 2011.
+ \begin{quotation}\noindent Your annotation summary goes here. \end{quotation}
+
+\bibitem{Culp2011a}
+------, ``Chapter 2: Risk, uncertainty, and profit,'' in \emph{Risk Transfer:
+  Derivatives in Theory and Practice}.\hskip 1em plus 0.5em minus 0.4em\relax
+  John Wiley \& Sons, 2011.
+ \begin{quotation}\noindent Your annotation summary goes here. \end{quotation}
+
+\bibitem{Hayek1945}
+F.~Hayek, ``The use of knowledge in society,'' \emph{The American Economic
+  Review}, vol.~35, no.~4, pp. 519--530, 1945.
+ \begin{quotation}\noindent Your annotation summary goes here. \end{quotation}
+
+\bibitem{Kennedy1998a}
+P.~E. Kennedy, ``Teaching undergraduate econometrics: A suggestion for
+  fundamental change,'' \emph{The American Economic Review}, vol.~88, no.~2,
+  pp. 487--492, 1998.
+ \begin{quotation}\noindent Your annotation summary goes here. \end{quotation}
+
+\bibitem{Kennedy1998b}
+------, ``Using monte carlo studies for teaching econometrics,'' in
+  \emph{Teaching Undergraduate Economics: Alternatives to Chalk and Talk},
+  1998.
+ \begin{quotation}\noindent Your annotation summary goes here. \end{quotation}
+
+\bibitem{Kiesling2015}
+L.~Kielsing, ``The knowledge problem,'' in \emph{The Oxford Handbook of
+  Austrian Economics}, 2015.
+ \begin{quotation}\noindent Your annotation summary goes here. \end{quotation}
+
+\bibitem{NameYear}
+F.~M. Last, ``The title of the paper,'' \emph{The Name of the Journal},
+  vol.~31, no.~2, pp. 91--96, 1964.
+ \begin{quotation}\noindent Your annotation summary goes here. It can wrap over
+  many lines. As much as you need. You can use \LaTeX in your summary.
+  \end{quotation}
+
+\end{thebibliography}
