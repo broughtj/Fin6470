@@ -100,8 +100,8 @@ must hold:
 
 $$
 \begin{aligned}
-C_{u} &= \Delta \times u S + B e^{rh} \\
-C_{d} &= \Delta \times d S + B e^{rh} \\
+C_{u} &= \Delta u S + B e^{rh} \\
+C_{d} &= \Delta d S + B e^{rh} \\
 \end{aligned}
 $$
 
@@ -112,7 +112,7 @@ We can now see how to solve for these parameters. First we will solve for $B e^{
 as follows:
 
 $$
-B e^{rh} = C_{d} - \Delta \times d S
+B e^{rh} = C_{d} - \Delta d S
 $$
 
 
@@ -120,7 +120,7 @@ and plug it into the first for $B e^{rh}$ as follows:
 
 
 $$
-C_{u} = \Delta \times u S + C_{d} - \Delta d S
+C_{u} = \Delta u S + C_{d} - \Delta d S
 $$
 
 
@@ -149,12 +149,12 @@ $$
 
 So now we have solved for the correct value of $\Delta$ that gives us the number of shares we need to hold
 in our portfolio to synthetically replicate the call option.  We can now plug this $\Delta$ into
-$B e^{rh} = C_{d} - \Delta \times dS$ to get an equation, for which the only unknown is $B$ and solve for it.
+$B e^{rh} = C_{d} - \Delta dS$ to get an equation, for which the only unknown is $B$ and solve for it.
 We do this as follows:
 
 
 $$
-B e^{rh} = C_{d} - \left(\frac{C_{u} - C_{d}}{S(u-d)}\right) \times d S
+B e^{rh} = C_{d} - \left(\frac{C_{u} - C_{d}}{S(u-d)}\right) d S
 $$
 
 
@@ -164,7 +164,7 @@ This we can rearrange as:
 
 $$
 \begin{aligned}
-B e^{rh} &=& C_{d} \times \frac{(u-d)}{(u-d)} - \left(\frac{d C_{u} - d C_{d}}{u-d}\right) \\
+B e^{rh} &=& C_{d} \frac{(u-d)}{(u-d)} - \left(\frac{d C_{u} - d C_{d}}{u-d}\right) \\
          &=& \frac{u C_{d} - d C_{d} - d C_{u} + d C_{d}}{u-d} \\
          &=& \frac{u C_{d} - d C_{u}}{u-d}
 \end{aligned}
@@ -188,8 +188,8 @@ We simply plug in for $\Delta$ and $B$ in the following:
 
 $$
 \begin{aligned}
-C_{0} &=& \Delta \times S + B \\
-      &=& \left( \frac{C_{u} - C_{d}}{S(u-d)} \right) \times S + e^{-rh} \left( \frac{u C_{d} - d C_{u}}{u-d} \right) \\
+C_{0} &=& \Delta S + B \\
+      &=& \left( \frac{C_{u} - C_{d}}{S(u-d)} \right) S + e^{-rh} \left( \frac{u C_{d} - d C_{u}}{u-d} \right) \\
 \end{aligned}
 $$
 
@@ -205,7 +205,7 @@ We can rewrite the model as follows:
 
 $$
 \begin{aligned}
-C_{0} &=& \left( \frac{C_{u} - C_{d}}{S(u-d)} \right) \times S + e^{-rh} \left( \frac{u C_{d} - d C_{u}}{u-d} \right) \\
+C_{0} &=& \left( \frac{C_{u} - C_{d}}{S(u-d)} \right) S + e^{-rh} \left( \frac{u C_{d} - d C_{u}}{u-d} \right) \\
       &=& \left( \frac{C_{u} - C_{d}}{(u-d)} \right) + e^{-rh} \left( \frac{u C_{d} - d C_{u}}{u-d} \right) \\
       &=& e^{-rh} \left( \frac{e^{rh} C_{u} - e^{rh} C_{d} + u C_{d} - d C_{u}}{u-d} \right) \\
       &=& e^{-rh} \left(C_{u} \frac{e^{rh} - d}{u-d} + C_{d} \frac{u - e^{rh}}{u-d} \right)
