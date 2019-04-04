@@ -80,12 +80,23 @@ To fix ideas, recall that our simple assumption of binomial prices leads to two
 binomial trees: one for the stock price, and one for the option price:
 
 
+## Stock Price Tree
+
+\begin{center}
+ \includegraphics[width=7cm,height=4cm]{images/Stock-Tree.png}
+\end{center}
+
+
+## Option Price Tree
+
+\begin{center}
+ \includegraphics[width=7cm,height=4cm]{images/Option-Tree.png}
+\end{center}
+
 ## The Replicating Portfolio Concept
 
 The basic idea of the Binomial Option Pricing Model is to set up a replicating portfolio to synthetically
 replicate the European call option payoff. This lead to a simple equation:
-
-\medskip
 
 $$
 C_{0} = \Delta S + B
