@@ -1,21 +1,21 @@
 # Finance 6470: Derivatives Markets 
 
-### Spring Semester, 2019
+### Spring Semester, 2020
 
 ## Course Information
 
-- Course Dates: January 7 - April 23
+- Course Dates: January 6 - April 29
 - Course Time: TR 1:30 - 2:45 PM 
-- Course Room: Huntsman Hall 170
+- Course Room: Huntsman Hall 122
 - [Slack Channel](https://fin6470-usu.slack.com)
-- [Course Canvas](https://usu.instructure.com/courses/443764)
+- [Course Canvas]()
 
 
 ## Instructor Information
 
 - [Tyler J. Brough](http://tylerbrough.com)
 - Office Hours: TBD & By Appointment
-- Office: BUS 605
+- Office: BUS 512 
 - Email: tyler dot brough at aggiemail dot usu dot edu (please use this one and NOT my tyler dot brough at usu dot
 		edu account)
 
@@ -25,7 +25,11 @@
 ### Course Description
 
 This course covers modern derivatives markets from the economic, institutional, and
-quantitative perspectives. 
+quantitative perspectives. The foundational principle of all of economics is the
+Arbitrage Principle. We will undertake an in-depth study of the Arbitrage Principle
+from several perspectives including the neoclassical and Austrian schools of thought.
+We will also discuss modern developments such as the influence of artificial intelligence
+and machine learning upon the operation of derivatives markets.
 
 
 ### Textbooks
@@ -42,12 +46,19 @@ I will also use some other books for some lecture material. Some of these other 
 
 * [The Economic Function of Futures Markets][Williams] by Jeffrey Williams (entirely mind-bending perspective)
 
+There will be many additional readings from academic articles assigned throughout the semester. __This course is reading intensive
+so please be prepared to read thoroughly and discuss the readings__. 
+
+
 ### Methods of Teaching and Learning
 
-This course will be taught as a graduate seminar-style course. That means that your participation is crucial. You will get out of the course
+This course will be taught as a graduate seminar style course. That means that your participation is crucial. You will get out of the course
 what you individually and collectively put in. 
 
-I will use the Socratic method as much as feasible during class sections. 
+I will use the Socratic method as much as feasible during class sections. I will aso present standard chalk-and-talk style lectures for 
+background material, but here too I will employ the Socratic method. 
+
+___Your preparation and participation is absolutely essential!___
 
 
 ### Assessment 
@@ -112,10 +123,10 @@ We will cover three broad modules:
 
 Import dates:
 
-* __Jan 8__ - First day of classes
-* __Mar 11 - 15__ - Spring break
-* __Apr 23__ - Last day of classes
-* __Apr 25 - May 1__ - Final exams
+* __Jan 6__ - First day of classes
+* __Mar 02 - 06__ - Spring break
+* __Apr 21__ - Last day of classes
+* __Apr 23 - Apr 29__ - Final exams
 
 
 [McDonald]: https://www.amazon.com/Derivatives-Markets-3rd-Pearson-Finance/dp/0321543084/ref=sr_1_1?ie=UTF8&qid=1484071179&sr=8-1&keywords=derivatives+markets
