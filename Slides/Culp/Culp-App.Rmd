@@ -1,0 +1,305 @@
+---
+title: Finance 6470 - Derivatives Markets
+subtitle: Christopher Culp - Economic Theory and Equilibrium
+author: Tyler J. Brough
+institute: Department of Finance and Economics 
+titlegraphic: ./images/vertical-logo-blue.png
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: ./beamer-template.tex
+    keep_tex: true
+ # toc: false
+    slide_level: 2
+make149: true
+---
+
+<style>
+slides > slide.backdrop {
+  background: white;
+  border-bottom: 0px;
+  box-shadow: 0 0 0;
+}
+
+
+slides > slide {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  border-bottom: 3px solid  #F66733;
+  box-shadow:  0 3px 0 #00488D;
+
+}
+
+.title-slide hgroup h1 {
+  color: #00488D;
+}
+
+
+
+h2 {
+
+  color: #00488D;
+}
+
+slides > slide.dark {
+  background: #00488D !important;
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+.segue h2 {
+  color: white;
+}
+
+slides > slide.title-slide {
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+ol, ul {
+
+padding-bottom: 10px;
+
+}
+
+</style>
+
+
+## Epigraph
+
+> _"There are basically two kinds of philosophy: prickles and goo. Prickly
+> people are precise and logical - they like everything chopped up and 
+> clear. On the other hand, goo people like it vague. In physics, prickly
+> people are those who believe that the ultimate constituency of matter
+> is particles, whereas goo people believe in waves. In philosophy, prickly
+> people are logical positivists, and goo people are idealists. And they're
+> always arguing with each other. But neither could take a position without
+> the other perosn, because you wouldn't know that you advocated prickles
+> unless there were someone out there advocating goo. You can't know a 
+> prickle without the goo. And life is neither prickles nor goo - it's 
+> gooey prickles and prickly goo."_ -- Alan Watts (Out of Your Mind pp. 17-18)
+
+## Introduction
+
+* "One of the most important concepts in both economics and finance is the notion of _equilibrium_"
+
+* It may surprise you to discover that there is not universally agreed upon definition of equilibrium. 
+	- We will be discussing several different views of equilibrium
+
+* Invoking an equilibrium concept is the way that ___most___ economic models operate. So understanding the basic
+  ideas are crucial. 
+
+## The Relevance of Economic Theory 
+
+* The economist Lionel Robbins wrote _"the science which studies human behavior as a relationship between ends and scarce means which have
+  alternative uses"_ (Robbins, 1932, p. 16)
+
+* This is the basic idea of neoclassical equilibrium, at least as painted with _very_ broad brush strokes
+
+* Hayek and Buchanan take issue with this definition
+	- Hayek proposed a definition of equilibrium as the coordination of individual plans
+	- Buchanan proposed that economists study ___catallactics___ or ___symbiotics___
+	- These two views are practically the same, but Buchanan fills in some of the details about what Hayek meant (we are very grateful for that)
+	- The basic view takes into account the dynamic nature of the market and conceives of it fundamentally as a ___process___
+	- Buchanan felt so strongly that he proposed that he might not be an ___economist___ (he meant that if Robbins's definition is accepted, then he was not that)
+
+## Culp's Take 
+
+* _"But at the day-to-day level of corporate decision making, economic theory has been so marginalized that it is viewed as being largely irrelevant."_
+
+* _"\textbf{\textit{Everyone}} outside the economic profession has probably at one time or another regarded economists as overly theoretical and abstract
+  creatures disconnected from the operations of 'the real world.'"_
+
+* The main reason:
+	- _"... a self-inflicted wound for which economists have only themselves to blame."_
+	- _"scholarly economics journals and studies have over the years become increasingly reliant on highly mathematical and technical modeling approaches."_
+	- _"Paradoxically, the better the economist by most current metrics of the profession, the less likely it is that an average person with a B.A. from a 
+	  liberal arts school will be able to digest what they say and write."_
+
+
+## My Take
+
+* Culp doesn't quite convince me that this is why. He's warm though. 
+
+* If the highly mathematical models were predictive, then firms would gladly hire talent that can understand and implement them. 
+
+* Look at the role of ___quants___ on Wall Street. This suggests that finance models have some empirical and predictive content. 
+	- Wall Street hires more physicists than all other hiring sources combined!
+	- Q: What is the world market for DSGE models outside of academia and government?!
+
+* Also see what is happening around ___Data Science___ right now. A PhD in statistics, computer science or electrical engineering is a hot ticket!
+
+
+## Relevance Continued
+
+* The classical economists were not marginalized, but rather were seen as quite important members of society!
+
+* _"Historically, economics was neither a science nor a subject aimed primarily at the intellectual."_
+
+* _"A second reason for the marginalization of economic theory today must surely be the widespread perception [of] its general failure as a science."_
+	- Ouch! Harsh! But true?
+
+## Physics vs Economics
+
+> _"An example will suffice to illustrate the point. In physics, the law of gravity says that when an apple becomes detached from the tree, it will fall
+> to the ground. No matter how much data you collect, this will be true 100 percent of the time. In economics, the criteria for determining 'success' of
+> models are much laxer. The law of demand, for example, states that the price someone is willing to pay for a good is inversely proportional to the 
+> quantity demanded - that is 'demand curves' slope down."_
+
+
+## Schools of Economic Thought And Characterizations of Equilibrium
+
+* Economics began with Adam Smith's publication of _The Wealth of Nations_
+
+* It is notable that Smith was a ___moral philosopher___ and not a mathematician or a physical scientist
+
+
+## Classical Period
+
+* Smith's WON was published in 1776 (a good year for very important documents)
+
+* Classical economists: 
+	- Adam Smith (a moral philosopher)
+	- David Ricardo (member of parliament)
+	- Karl Marx (journalist and revolutionary)
+	- John Stuart Mill (philosopher)
+	- Thomas Malthus (member of parliament)
+
+* Labor theory of value
+
+* Belief that most things in the economy tended towards some _natural rate_
+
+* _"The tendency of supply shifts to cause a convergence between market and natural rates is essentially the Classical or Ricardian definition of
+  an equilibrium."_
+
+
+## The Marginalist Revolution and the Neoclassical Period
+
+* The birth of the neoclassical period is credited to William Stanley Jevons and Leon Walras
+	- Jevons: LOOP
+	- Walras: father of mathematical method in economics. Simultaneous equations for supply and demand. Auctioneer who clears markets.
+
+* Carl Menger was also a key figure (would become the father of the Austrian school)
+	- Harshly criticized Marx's labor theory of value
+	- Originated the concept of subjective value
+
+* Jevons, Walras and Menger originated the __"marginal revolution"__
+	- Market value of goods and factors of production were determined "at the margin" between the forces of supply and demand
+	- Intro Micro: $MR = MC$ 
+
+
+## The Marginal Revolution Continued
+
+* Jevon's LOOP
+	- _"identical goods of uniform quality must sell for the same price."_
+
+* Walras
+	- _"Walras argued that the market price of a good was the price at which supply and demand curves intersected."_
+	- One of the first to discuss the concept of _marginal utility_
+	- _"What Walras did not do, however, was contemplate any realist adjustment mechanism by which the market forces
+	  of supply and demand were reconciled.... Instead, Walras merely supposed the existence of an auctioneer who
+	  literally called out prices."_
+	
+
+## The Marginal Revolution Continued
+
+* Edgeworth refined Walrasian equilibrium by introducing the possibility of _recontracting_.
+	- _"Economic agents would simple amend their prior price agreements"_
+
+* Marshall: developed the concepts of _short run_ and _long run_
+
+
+* _"Only imperfect competition can explain positive long-run profits in a Marshallian equilibrium."_
+
+
+## Summary of The Neoclassical School
+
+The basic tenets of the neoclassical school include the following: 
+
+* The law of one price
+
+* The distinctions between short-run and long-run behavior of market participants and markets
+
+* The inability of firms to earn positive economic profits in the long run in a perfectly competitive market
+
+* Returns to scale in production; nonsatiation and diminishing marginal utility in consumption
+
+* Market efficiency
+
+* Equilibrium is seen as a balance of forces
+
+* Nothing interesting about _disequilibrium_, since it is seen as a momentary state that cannot persist
+
+
+## Menger and the Austrian Critique
+
+* The so-called ___"Austrian School"___ gets its name from the fact that Menger was an Austrian
+	- Curious fact: there are not current "Austrian" economists living in Austria 
+
+* _"The Austrian school was quickly marginalized"_ 
+
+* Capital theory of Bohm-Bawerk (1891) and Lachmann (1978) 
+
+* Nobelists F.A. Hayek and Sir John Hicks (who also accepted by neoclassicals)
+
+
+## Menger Continued
+
+* _"Menger (1871) deserves probably as much credit as Walras (1874) for recognizing the role of 
+  marginal utility in governing consumption optimality. But unlike Walras and other neoclassicals,
+  Menger (1871) advanced the theory of \textbf{subjective value}, which held that each individual's
+  values and utilities were subjective, relative, dependent on the psychology and wants of that 
+  particular individual, and - imporantly - not directly comparable across different economic agents."_
+
+
+* Noeclassical economics tends to stress objective and knowable quantities
+
+* Austrian economics tends to stress subjective and unknowable quanities
+
+
+## Menger Continued
+
+
+* _"The neoclassical theory of equilibrium essentially postulates an equilibrium as a balance of forces - 
+  supply and demand - that lead to either a state of rest or a steady state of uniform motion in a system."_
+
+* _"In the Austrian theory, equilibrium can be better defined as a situation in which knowledge and expectations
+  lead to consistent plans. Hayek (1937) defines and equilibrium as a situation in which 'the different plans which
+  the individuals composing [an economic system] have made for action in time are mutually compatible.' To Austrians,
+  equilibrium thus is more of a \textbf{tendency} than a stationary or steady state."_
+
+* _"... perhaps the richest insights from the Austrian school thus are not its analyses of equilibrium, but
+  rather its analysis of \textbf{disequilibrium}."_
+
+
+## Menger Continued
+
+* _"In the Austrian paradigm, disequilibrium is basically the constant state of affairs. Markets still \textbf{tend}
+  toward equilibrium, but the constant changes in information, knowledge, and expectations of individuals make the 
+  market much more of a \textbf{process} than a state of nature."_
+
+* What if the Austrians were right? That would mean there is no Marshallian long-run state towards which the market
+  is inevitably moving. This would imply that some form of stable situation exists in which profits are possible
+  and information is not equal across market participants.
+
+* I should - here as elsewhere - acknowledge my heresy to be honest in advertising
+
+
+## Hick's Neo-Austrian Middle Ground
+
+* Sir John Hicks called himself a \textbf{\textit{neo-Austrian}}
+
+* Hicks adopted Hayek's notion of equilibrium as a consistency in plans (in most of his work)
+
+* He fundamentally disagreed with Marshall about a clean separation between short and long run.
+
+* He embraced these Austrian concepts without giving up the standard tools of formal economic analysis (pioneered by Jevons and Walras)
+
+
+## Neo-Austrian Continued
+
+* In this class we essentially retain the core features of the neoclassical paradigm (LOOP, marginalism, rising supply price, etc)
+
+* ___But___ we remain openly sympathetic to the Austrian critique and to the view of the market as a process, equilibrium as a consistency of plans
+
+
+* _"it becomes quite hard to explain a lot of financial and derivatives market activity without being \textbf{a little bit Austrian}"_
