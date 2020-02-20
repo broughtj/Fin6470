@@ -178,11 +178,20 @@ Classical arbitrage describes a situation in which we can generate a positive ca
 
 \vspace{6mm}
 
-__Note to Self:__ _Make sure students understand this point about the market-maker's hedging. Relate it to the issues of Hayekian knowledge problems,
-Hayekian equilibrium as the coordination of plans, and Knightian uncertainty (core and non-core risk). This is crucial to understand how the market-maker
-is an arbitrageur in the sense of Holbrook Working. With this as a foundation the options market-maker implicit in BSM option theory should be readily 
-understood. See Chapter 13 of McDonald._
 
+* __Note to Self:__ 
+
+> _Make sure students understand this point about the market-maker's hedging. Relate it to the issues of Hayekian knowledge problems, Hayekian
+   equilibrium as the coordination of plans, and Knightian uncertainty (core and non-core risk). This is crucial to understand how the market-maker
+   is an arbitrageur in the sense of Holbrook Working. With this as a foundation the options market-maker implicit in BSM option theory should be
+   readily understood. See Chapter 13 of McDonald._
+
+\vspace{6mm}
+
+* Decision Theory Persective
+
+> _"I go under the following principle. If you don't understand a problem from a Bayesian decision theory point of view, you don't understand
+    the problem and trying to solve it is like shooting at a target in the dark."_ -- Herman Chernoff (Quoted in the book _Decision Theory: Principles and Approachs_)
 
 \vspace{10mm}
 
