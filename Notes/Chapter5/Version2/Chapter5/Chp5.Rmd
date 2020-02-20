@@ -39,7 +39,11 @@ If we allow for the possibility that payment and physical receipt can occurr at 
 * __(4)__ __Forward Contract:__ 
     - Both payment and physical receipt at $t=T$
         
-\vspace{10mm}
+\vspace{5mm}
+
+![](./images/Picture1.png)
+
+\vspace{15mm}
 
 ## Section 5.2 Prepaid Forward Contracts on Stock
 
@@ -54,7 +58,7 @@ Let's derive the prepaid forward price by three different methods:
 2. Pricing by present value
 3. Pricing by arbitrage
 
-\newpage 
+\vspace{10mm}
 
 __Pricing by Analogy__
 
