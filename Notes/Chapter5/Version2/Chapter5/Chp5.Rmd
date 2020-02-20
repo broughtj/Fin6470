@@ -148,17 +148,41 @@ Classical arbitrage describes a situation in which we can generate a positive ca
 - Same cash flows as a market-maker who is hedging a position
     * The market-maker would sell a prepaid forward if the customer wished to buy it
     * The market-maker is now obliged to deliver the stock at $t=T$
-    * Can buy the stock at $t=0$ to hedge
-    
-\vspace{6mm}
-
-- McDonald say this (on page 128)
-
-> "The market-maker thus engages in the same transactions as an arbitrageur, except the purpose is risk management, not arbitrage"
+	* Can buy the stock at $t=0$ to hedge
 
 \vspace{6mm}
 
 - In equilibrium $F_{0,T}^{P} = S_{0}$ must hold
+
+\vspace{6mm}
+
+- McDonald say this (on page 128)
+
+> _"Throughout the book we will assume that prices are at levels that preclude arbitrage. This raises a question: If prices are such that
+    arbitrage is not profitable, who can afford to become an arbitrageur, watching out for arbitrage opportunities? We can resolve this
+	paradox with the insight that in order for arbitrageurs to earn a living, arbitrage opportunities must occur from time to time;
+	there must be_ ___'an equilibrium degree of disequilibrium.'___ _However, you would not expect arbitrage to be obvious or easy to undertake._
+
+> _"The transactions in Table 5.2 are the same as those of a market-maker who is hedging a position. A market-maker then has an obligation to
+    deliver the stock at a fixed price and, in order to offset the risk, can buy the stock._ ___"The market-maker thus engages in the same
+	transactions as an arbitrageur, except the purpose is risk management, not arbitrage.___ _Thus, the transaction described in Table 5.2 --
+	selling the prepaid forward and buying the stock -- also describes the actions of a market-maker."_
+
+\vspace{6mm}
+
+- McDonald writes about ___an equilibrium degree of disequilibrium___.
+
+- __Q:__ What does this sentence mean? 
+
+- __Q:__ Why does he say this? 
+
+\vspace{6mm}
+
+__Note to Self:__ _Make sure students understand this point about the market-maker's hedging. Relate it to the issues of Hayekian knowledge problems,
+Hayekian equilibrium as the coordination of plans, and Knightian uncertainty (core and non-core risk). This is crucial to understand how the market-maker
+is an arbitrageur in the sense of Holbrook Working. With this as a foundation the options market-maker implicit in BSM option theory should be readily 
+understood. See Chapter 13 of McDonald._
+
 
 \vspace{10mm}
 
