@@ -1,0 +1,17 @@
+---
+title: "FIN 6470 - Homework Chapter 5"
+author: "Tyler J. Brough"
+date: "February 17, 2020"
+output: pdf_document
+---
+
+## __Prepaid Forward Contracts__
+
+1. Assume that $F_{0,T}^{P} > S_{0}$. Choose values for these quantities that match this assumption and make a table like Table 5.2 in your book to
+   calculate the arbitrage profit.  
+
+
+2. Now assume instead that the opposite is true, namely that $F_{0,T} < S_{0}$. Redo problem 1 in light of this information. 
+
+3. With these two problems as background, explain the thinking behind the no-arbitrage equation: $F_{0,T}^{P} = S_{0}$. Is this an economic law? 
+   Will it always hold? If not, when and why not? Under what conditions will it hold? If you were an arbitrageur, how would you use this equation?  

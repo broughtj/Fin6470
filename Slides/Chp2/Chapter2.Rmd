@@ -1,6 +1,6 @@
 ---
 title: Finance 6470 - Derivatives Markets
-subtitle: Chapter 2
+subtitle: Chapter 2 - 
 author: Tyler J. Brough
 institute: Department of Finance and Economics 
 titlegraphic: ./images/vertical-logo-blue.png
