@@ -135,15 +135,6 @@ Classical arbitrage describes a situation in which we can generate a positive ca
 
 \vspace{15mm}
 
-![](./images/Picture2.png)
-
-
-\vspace{15mm}
-
-![](./images/Picture3.png)
-
-\vspace{15mm}
-
 
 - Same cash flows as a market-maker who is hedging a position
     * The market-maker would sell a prepaid forward if the customer wished to buy it
@@ -260,7 +251,7 @@ $$
 - The prepaid forward price is
 
 $$
-F_{0,T}^{P} = \$125 = \$121.306
+F_{0,T}^{P} = \$125e^{{-0.03 (1)}} = \$121.306
 $$
 
 \vspace{10mm}
@@ -337,7 +328,8 @@ __Does the Forward Price Predict the Future Spot Price?__
 
 - It is common to think that the forward price predicts the future spot price
 
-- The pricing formula tells us the forward price equals the expected future spot price _plus_ a risky discount rate
+- The pricing formula tells us the forward price equals the expected future spot price _plus_ a risky discount rate.
+	+ Equation 5.9: $F_{0,T} = e^{rT} F_{0,T}^{P} = E_{0}(S_{T})e^{{-(\alpha - r) T}}$
 
 - The forward price _systematically_ errs in predicting the future stock price
 
