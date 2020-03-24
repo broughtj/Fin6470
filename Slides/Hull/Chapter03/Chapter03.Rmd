@@ -365,7 +365,7 @@ Later we will explore dynamic hedging strategies. Is it possible to beat a stati
 \begin{itemize}
    \item We can use stock index futures to hedge exposures to equity prices.
    \item[]
-   \item A \textbf{stock index} tracks changes in the value of a hypothetical portfolio of stocks.
+   \item A \textbf{stock index} Commodity Futures and Forwards tracks changes in the value of a hypothetical portfolio of stocks.
    \item[]
    \item Weights for particular stocks in the portfolio equal the proportion in the hypothetical index.
 \end{itemize}
