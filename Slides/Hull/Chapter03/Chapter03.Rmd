@@ -342,14 +342,18 @@ Later we will explore dynamic hedging strategies. Is it possible to beat a stati
 
 ## Stock Index Futures
 
-- We can use stock index futures to hedge exposures to equity prices.
-- A **stock index** tracks changes in the value of a hypothetical portfolio of stocks.
-- Weights for particular stocks in the portfolio equal the proportion in the hypothetical index.
+\begin{itemize}
+   \item We can use stock index futures to hedge exposures to equity prices.
+   \item[]
+   \item A **stock index** tracks changes in the value of a hypothetical portfolio of stocks.
+   \item[]
+   \item Weights for particular stocks in the portfolio equal the proportion in the hypothetical index.
+\end{itemize}
 
 
 ## Stock Indices
 
-**Table 3.3** shows futures prices for contracts on $3$ different stock Indices
+\textbf{Table 3.3} shows futures prices for contracts on $3$ different stock Indices
 as of May 14, 2013.
 
 ![](images/Table3-3.pdf)
@@ -357,32 +361,53 @@ as of May 14, 2013.
 
 ## Stock Indices Continued
 
-- The *Dow Jones Industrial Average* is based on a portfolio consisting of $30$ blue-chip stocks.
-	* Weights are proportional to prices
-	* CME trades two contracts based on the index:
-		+ one that is $\$10$ times the index
-		+ one that is $\$5$ time the index (the Mini)
-- The *Standard and Poor's 500 Index* (SP500) is based on a portfolio of $500$
-	* $400$ Industrials
-	* $40$ utilities
-	* $20$ transportation Companies
-	* $40$ financial institutions
-	* Two contracts trade on the SP500:
-		+ one that is $\$250$ times the index
-		+ one that is $\$50$ times the index (the Mini)
+\begin{itemize}
+   \item The \textit{Dow Jones Industrial Average} is based on a portfolio consisting of $30$ blue-chip stocks.
+	   \begin{itemize}
+         \item Weights are proportional to prices
+         \item CME trades two contracts based on the index:
+            \begin{itemize}
+               \item one that is $\$10$ times the index
+               \item one that is $\$5$ time the index (the Mini)
+            \end{itemize}
+      \end{itemize}
+   \item[]
+   \item The \textit{Standard and Poor's 500 Index} (SP500) is based on a portfolio of $500$
+      \begin{itemize}
+         \item $400$ Industrials
+         \item $40$ utilities
+         \item $20$ transportation Companies
+         \item $40$ financial institutions
+         \item Two contracts trade on the SP500:
+            \begin{itemize}
+               \item one that is $\$250$ times the index
+               \item one that is $\$50$ times the index (the Mini)
+            \end{itemize}
+      \end{itemize}
+\end{itemize}
+
 
 ## Stock Indices Continued
 
-- The *Nasdaq-100* is based on $100$ stocks using the NASDAQ
-	* Two contracts traded:
-		+ one that is $\$100$ times the index
-		+ one that is $\$20$ times the index (the Mini)
+\begin{itemize}
+   \item The \textit{Nasdaq-100} is based on $100$ stocks using the NASDAQ
+      \begin{itemize}
+         \item Two contracts traded:
+            \begin{itemize}
+               \item one that is $\$100$ times the index
+               \item one that is $\$20$ times the index (the Mini)
+            \end{itemize}
+      \end{itemize}
+\end{itemize}
 
 As mentioned in chapter 2, futures contracts on stock indices are cash settled.
 
-- Contracts are marked-to-market either on the opening or closing price of the index on the last trading day
-	* Ex: the SP500 contracts are closed out at the opening price of the index on $3^{rd}$
-	  Friday of the delivery month.
+\begin{itemize}
+   \item Contracts are marked-to-market either on the opening or closing price of the index on the last trading day
+      \begin{itemize}
+         \item Ex: the SP500 contracts are closed out at the opening price of the index on $3^{rd}$ Friday of the delivery month.
+      \end{itemize}
+\end{itemize}
 
 
 ## Hedging and Equity Portfolio
@@ -392,34 +417,46 @@ one of the indices.
 
 Define:
 
-- $V_{A}$ : the current value of the portfolios
-- $V_{F}$ : the current value of one futures contract (the futures price times the contract size)
+\begin{itemize}
+   \item $V_{A}$ : the current value of the portfolios
+   \item $V_{F}$ : the current value of one futures contract (the futures price times the contract size)
+\end{itemize}
 
 
 ## Hedging and Equity Portfolio Continued
 
-- If we assume the hedge ratio to be $1.0$ then the number of futures contracts to
+If we assume the hedge ratio to be $1.0$ then the number of futures contracts to
 be shorted is:
 
 $$N^{\ast} = \frac{V_{A}}{V_{F}}$$
 
 Suppose that a portfolio valued at $\$5,050,000$ tracks the SP500. Also:
 
-- The index is $1,010$ and each futures is on $\$250$ times the index
-- $V_{A} = 5,050,000$
-- $V_{F} = 250 \times 1010 = 252,500$
-- This means we need $20$ futures contracts (short) to hedge the exposure
+\begin{itemize}
+   \item The index is $1,010$ and each futures is on $\$250$ times the index
+   \item $V_{A} = 5,050,000$
+   \item $V_{F} = 250 \times 1010 = 252,500$
+   \item This means we need $20$ futures contracts (short) to hedge the exposure
+\end{itemize}
 
 
 ## Hedging and Equity Portfolio Using the CAPM
 
-- When the portfolio does not track the index we can use the CAPM (see appendix to chapter 3).
-- The key parameter from the CAPM is the $\beta$:
-	* When $\beta = 1.0$ the portfolio tracks the index
-	* When $\beta = 2.0$ the return on the portfolio tends to be twice the index
-	* When $\beta = 0.5$ the return on the portfolio tends to be half the index
-- A portfolio with $\beta = 2.0$ is twice as sensitive to movements in the index as a portfolio with $\beta = 1.0$
-	* So we need to use twice as many futures contracts, etc
+\begin{itemize}
+   \item When the portfolio does not track the index we can use the CAPM (see appendix to chapter 3).
+   \item[]
+   \item The key parameter from the CAPM is the $\beta$:
+      \begin{itemize}
+         \item When $\beta = 1.0$ the portfolio tracks the index
+         \item When $\beta = 2.0$ the return on the portfolio tends to be twice the index
+         \item  When $\beta = 0.5$ the return on the portfolio tends to be half the index
+      \end{itemize}
+   \item[]
+   \item A portfolio with $\beta = 2.0$ is twice as sensitive to movements in the index as a portfolio with $\beta = 1.0$
+      \begin{itemize}
+         \item  So we need to use twice as many futures contracts, etc
+      \end{itemize}
+\end{itemize}
 
 
 ## Hedging and Equity Portfolio Using the CAPM
@@ -428,25 +465,37 @@ Using the CAPM $\beta$ the new hedge ratio becomes:
 
 $$N^{\ast} = \beta \frac{V_{A}}{V_{F}}$$
 
-- This assumes that $\hat{h} = \beta$, unsurprisingly
+\begin{itemize}
+   \item This assumes that $\hat{h} = \beta$, unsurprisingly
+\end{itemize}
 
 
 ## Hedging and Equity Portfolio Using the CAPM
 
 Assume the following:
 
-- The value of the SP500 index is $= 1,000$
-- The nearby SP500 futures price is $= 1,010$
-- The value of the portfolio $=\$5,050,000$
-- The risk-free rate is $r = 4\%$ per annum
-- The dividend yield on the index is $= 1\%$ per annum
-- The portfolio beta is $\beta = 1.5$
-- One contract is for $\$250$ times the index
+\begin{itemize}
+   \item The value of the SP500 index is $= 1,000$
+   \item[]
+   \item The nearby SP500 futures price is $= 1,010$
+   \item[]
+   \item The value of the portfolio $=\$5,050,000$
+   \item[]
+   \item The risk-free rate is $r = 4\%$ per annum
+   \item[]
+   \item The dividend yield on the index is $= 1\%$ per annum
+   \item[]
+   \item The portfolio beta is $\beta = 1.5$
+   \item[]
+   \item One contract is for $\$250$ times the index
+\end{itemize}
 
 
 ## Hedging and Equity Portfolio Using the CAPM
 
-- $V_{F} = 252,500$ as before
+\begin{itemize}
+   \item $V_{F} = 252,500$ as before
+\end{itemize}
 
 Using the CAPM we get the following optimal hedge ratio:
 
@@ -460,19 +509,24 @@ $$30 \times (1010 - 902) \times 250 = \$810,000$$
 
 ## Hedging and Equity Portfolio Using the CAPM
 
-- The loss on the index is $10\%$
-- The index pays a dividend of $0.25\%$ per $3$ months
-- Thus an investor would have earned a return of $-9.75\%$
+\begin{itemize}
+   \item The loss on the index is $10\%$
+   \item The index pays a dividend of $0.25\%$ per $3$ months
+   \item Thus an investor would have earned a return of $-9.75\%$
+\end{itemize}
 
 By the CAPM we see that
 
 $$1.0 + [1.5 \times (-9.75 - 1.0)] = -15.125$$
+
 
 ## Hedging and Equity Portfolio Using the CAPM
 
 The expected value of the portfolio at the end of $3$ months is:
 
 $$\$5,050,000 \times (1 - 0.15125) = \$4,286,187$$
+
+\vspace{3mm}
 
 The expected value of the hedged position is then:
 
@@ -496,16 +550,26 @@ $$(\beta^{\ast} - \beta) \frac{V_{A}}{V_{Q}}$$
 
 ## The Stack and Roll
 
-- Sometimes the expiration date of a hedge is later than the delivery dates of available futures contracts
-- The hedger must then *roll the hedge* forward by closing out the original position and taking a new one
-- Hedges can be rolled forward many times in a procedure known as the **stack and roll**
+\begin{itemize}
+   \item Sometimes the expiration date of a hedge is later than the delivery dates of available futures contracts
+   \item[]
+   \item The hedger must then \textit{roll the hedge} forward by closing out the original position and taking a new one
+   \item[]
+   \item Hedges can be rolled forward many times in a procedure known as the \textbf{stack and roll}
+\end{itemize}
 
 
 ## The Stack and Roll
 
-- Time $t_{1}$   : Short futurec contract 1
-- Time $t_{2}$   : Close out futures position 1, short futures contract 2
-- Time $t_{3}$   : Close out futures position 2, short futures contract 3
-- Time $t_{n-1}$ : Close out futures position $n-1$, short futures contract $n$
-- Time $t_{n}$   : Close out futures contract $n$
+\begin{itemize}
+   \item Time $t_{1}$: Short futures contract 1
+   \item[]
+   \item Time $t_{2}$: Close out futures position 1, short futures contract 2
+   \item[]
+   \item Time $t_{3}$: Close out futures position 2, short futures contract 3
+   \item[]
+   \item Time $t_{n-1}$: Close out futures position $n-1$, short futures contract $n$
+   \item[]
+   \item Time $t_{n}$: Close out futures contract $n$
+\end{itemize}
 
