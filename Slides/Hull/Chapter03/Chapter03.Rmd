@@ -573,3 +573,71 @@ $$(\beta^{\ast} - \beta) \frac{V_{A}}{V_{Q}}$$
    \item Time $t_{n}$: Close out futures contract $n$
 \end{itemize}
 
+
+# Appendix: Culp \& Miller on \textit{Hedging a Flow of Commodity Deliveries with Futures}
+
+## Culp \& Miller - Hedging a Flow of Commodity Deliveries with Futures 
+
+\begin{itemize}
+   \item Beginning in Decemember of 1991 MGRM offered long-term delivery contracts on petroleum products
+   \item These contracts obligated MGRM to make monthly delieveries on heating oil and gasoline for up to 10 years at fixed prices.
+   \item MGRM was thus operating as a commodity swap dealer offering fixed-for-floating contracts. 
+      \begin{itemize}
+         \item MGRM offered fixed prices, but faced floating prices
+         \item This exposed MGRM to the risk that oil prices would rise
+      \end{itemize}
+   \item MGRM hedged part of their price risk with futures contracts.
+   \item In 1993 MGRM prematurely liquidated its hedge position leading to a reported loss of $\$1.33$ billion.
+\end{itemize}
+
+
+## Managing the Market Risk of a Commodity Flow
+
+\begin{itemize}
+   \item By Nov. 1993 MGRM had committed to deliver at fixed prices the equivalent of 160 million bbls. of crude oil (in the form of refined products)
+   \item[]
+   \item MGRM chose to hedge at least part of their price risk with short-term futures contracts traded on the NYMEX exchange 
+      \begin{itemize}
+         \item NYMEX is not owned and operated by the CME Group. 
+         \item See \url{cmegroup.com/company/nymex.html}
+      \end{itemize}
+   \item[]
+   \item Most of MGRM's positions were in one-month futures based on unleaded gasoline nad No. 2 heating oil.
+   \item[]
+   \item Some were in West Texas Intermediate (WTI) crude oil.
+\end{itemize}
+
+
+## MGRM's Stack-and-Roll Strategy
+
+\begin{itemize}
+   \item It turns out that a firm \textit{can} hedge its long-term exposure (MGRM's were up to 10 years) to oil price increases
+         using short-dated futures contracts of only one month to maturity. 
+   \item[]
+   \item This strategy is known as \textbf{stack-and-roll}.
+   \item[]
+   \item The strategy calls for purchasing futures equivalent to the entire remaining obligation on its flow contracts.
+\end{itemize}
+
+
+## MGRM's Stack-and-Roll Strategy Continued
+
+\begin{itemize}
+   \item On the first delivery date (first month of the contract) it buys for delivery in the spot market
+   \item[]
+   \item Offsets all of its maturing contracts, and re-establishes a long position in the next front-month futures contracts
+   \item[]
+   \item This new position is reduced by the amount of the commodity that has just been delivered 
+   \item[]
+   \item The hedger procedes stacking and rolling its hedge in this matter for the life of the long-term contract.
+\end{itemize}
+
+
+## Example of a Simple Stack-and-Roll Hedge
+
+![](images/Stack-and-Roll-Hedge.jpg)
+
+
+## Example of a Simple Strip Hedge
+
+![](images/Strip-Hedge.jpg)
