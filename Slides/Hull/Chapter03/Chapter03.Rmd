@@ -136,7 +136,7 @@ $$\mbox{Basis} = \mbox{Spot price} - \mbox{Futures price}$$
 \end{itemize}
 
 
-## Basis Continued
+## Alternative Definition for Basis
 
 If we start with the basic forward pricing equation:
 
@@ -147,11 +147,16 @@ $$
 We can then divide both sides by $S_{0}$ and take logs:
 
 $$
-\begin{aligned}
-\ln{(F_{0,T})} - \ln{(S_{0})} &= (r - \delta) T \\
-b_{t}                         &= -(r - \delta) T
-\end{aligned}
+\underbrace{\ln{(F_{0,T})} - \ln{(S_{0})}}_{b_{t}} = (r - \delta) T 
 $$
+
+So that
+
+$$
+b_{t} = (r - \delta) T
+$$
+
+\textbf{\textit{NB:}} for commodity markets there will be other terms in $b_{t}$
 
 ## Basis Continued
 
@@ -180,7 +185,22 @@ To examine the nature of basis risk we will use the following notation:
 \end{itemize}
 
 
-## An Example
+## An Example (Pages 59-60)
+
+\begin{itemize}
+   \item An airline will purchase 2 million gallons of jet fuel in one month and hedges using heating oil futures 
+   \item[]
+   \item From historical data:
+      \begin{itemize}
+         \item $\sigma_{F} = 0.0313$
+         \item $\sigma_{S} = 0.0263$
+         \item $\rho = 0.928$
+      \end{itemize}
+\end{itemize}
+
+$$
+h^{\ast} = 0.928 \ast \frac{0.0263}{0.0313} = 0.7777
+$$
 
 
 ## Contract Size
@@ -345,7 +365,7 @@ Later we will explore dynamic hedging strategies. Is it possible to beat a stati
 \begin{itemize}
    \item We can use stock index futures to hedge exposures to equity prices.
    \item[]
-   \item A **stock index** tracks changes in the value of a hypothetical portfolio of stocks.
+   \item A \textbf{stock index} tracks changes in the value of a hypothetical portfolio of stocks.
    \item[]
    \item Weights for particular stocks in the portfolio equal the proportion in the hypothetical index.
 \end{itemize}
@@ -356,7 +376,7 @@ Later we will explore dynamic hedging strategies. Is it possible to beat a stati
 \textbf{Table 3.3} shows futures prices for contracts on $3$ different stock Indices
 as of May 14, 2013.
 
-![](images/Table3-3.pdf)
+![](images/Table3-3.png)
 
 
 ## Stock Indices Continued
