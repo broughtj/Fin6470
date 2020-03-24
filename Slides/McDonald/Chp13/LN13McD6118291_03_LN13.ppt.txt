@@ -1,0 +1,151 @@
+Chapter 13
+Market-Making and Delta-Hedging
+
+What Do Market Makers Do?
+Provide immediacy by standing ready to sell to buyers (at ask price) and to buy from sellers (at bid price)
+Generate inventory as needed by short-selling
+Profit by charging the bid-ask spread
+2
+
+What Do Market Makers Do? (cont’d)
+The position of a market-maker is the result of whatever order flow arrives from customers
+Proprietary trading, which is conceptually distinct from market-making, is trading to express an investment strategy
+3
+
+Market-Maker Risk
+Market makers attempt to hedge in order to avoid the risk from their arbitrary positions due to customer orders 
+Market-makers can control risk by delta-hedging
+Delta-hedged positions should expect to earn risk-free return  
+4
+
+Market-Maker Risk (cont’d)
+5
+
+Market-Maker Risk (cont’d)
+Delta (Δ) and gamma (Γ) as measures of exposure
+Suppose Δ is 0.5824, when S = $40 (Table 13.1 and Figure 13.1)    
+A $0.75 increase in stock price would be expected to increase option price by $0.4368 (= $0.75 x 0.5824)     
+The actual increase in the option’s value is higher: $0.4548
+This discrepancy occurs because Δ increases as stock price increases.  Using the smaller Δ at the lower stock price understates the actual change 
+Similarly, using the original Δ overstates the change in the option value as a response to a stock price decline
+Using Γ in addition to Δ improves the approximation of the option value change
+6
+
+Delta-Hedging
+Suppose a market-maker sells one option, and buys Δ shares
+Delta hedging for 2 days: (daily rebalancing and mark-to-market):
+Day 0: Share price = $40, call price is $2.7804, and Δ = 0.5824 
+Sell call written on 100 shares for $278.04, and buy 58.24 shares.  
+Net investment:  (58.24x$40) – $278.04 = $2051.56
+At 8%, overnight financing charge is $0.45  [= $2051.56x(e0.08/365-1)]
+Day 1: If share price = $40.5, call price is $3.0621, and Δ = 0.6142
+Overnight profit/loss: $29.12 – $28.17 – $0.45 = $0.50
+Buy 3.18 additional shares for $128.79 to rebalance 
+Day 2: If share price = $39.25, call price is $2.3282 
+Overnight profit/loss:  – $76.78 + $73.39 – $0.48 =  – $3.87
+
+Delta-Hedging (cont’d)
+Delta hedging for several days
+8
+
+Delta-Hedging (cont’d)
+Delta hedging for several days (cont.)
+Γ: For large decreases in stock price, Δ decreases, and the option increases in value slower than the loss in stock value.  For large increases in stock price Δ increases, and the option decreases in value faster than the gain in stock value.  In both cases the net loss increases and the market-maker loses money.  For small moves in the stock price, the market-maker makes money.
+θ : If a day passes with no change in the stock price, the option becomes cheaper.  Since the option position is short, this time decay increases the profits of the market-maker.
+Interest cost: In creating the hedge, the market-maker purchases the stock with borrowed funds.  The carrying cost of the stock position decreases the profits of the market-maker.
+9
+
+Delta-Hedging (cont’d)
+10
+
+Delta-Hedging (cont’d)
+11
+
+Mathematics of ∆-Hedging
+  Δ−Γ approximations
+Recall the under (over) estimation of the new option value using Δ alone when stock price moved up (down) by ε.  (ε = St+h – St)
+Using the Δ−Γ approximation the accuracy can be improved a lot
+Example 13.1:  S: $40      $40.75, C: $2.7804     $3.2352,  Γ: 0.0652
+Using Δ approximation
+	C($40.75) = C($40) + 0.75 x 0.5824 = $3.2172 
+Using Δ−Γ approximation
+    C($40.75) = C($40) + 0.75 x 0.5824 + 0.5 x 0.752 x 0.0652 = $3.2355
+Similarly, for a stock price decline to $39.25, the true option price is $2.3622. The Δ approximation gives $23436, and the Δ−Γ approximation gives $2.3619.
+
+12
+
+Mathematics of ∆-Hedging (cont’d)
+ Δ−Γ approximation (cont’d)
+
+13
+
+Mathematics of ∆-Hedging (cont’d)
+ θ: Accounting for time
+
+
+
+
+14
+
+Mathematics of ∆-Hedging (cont’d)
+Market-maker’s profit when the stock price changes by ε over an interval h:
+Change in value 
+of stock
+Change in value 
+of option
+Interest
+expense
+The 
+effect
+ of Γ
+The 
+effect
+ of θ
+Interest cost
+
+Mathematics of ∆-Hedging (cont’d)
+Note that  Δ,  Γ  and θ are computed at t
+For simplicity, the subscript “t” is omitted in the above equation
+16
+
+Mathematics of ∆-Hedging (cont’d)
+If σ is measured annually, then a one-standard-deviation move ε over a period of length h is  	     Therefore,
+17
+
+The Black-Scholes Analysis
+Black-Scholes partial differential equation
+where Γ, Δ, and θ are partial derivatives of the option price computed at t
+Under the following assumptions:
+Underlying asset and the option do not pay dividends
+Interest rate and volatility are constant
+The stock does not make large discrete moves
+The equation is valid only when early exercise is not optimal
+18
+
+The Black-Scholes Analysis (cont’d)
+Advantage of frequent re-hedging
+Varhourly = 1/24 x Vardaily 	
+By hedging hourly instead of daily, total return variance is reduced by a factor of 24
+The more frequent hedger benefits from diversification over time
+Three ways for protecting against extreme price moves
+Adopt a Γ-neutral position by using options to hedge
+Augment the portfolio by buying deep-out-of-the-money puts and calls as insurance
+Use static option replication according to put-call parity to form a Γ- and Δ-neutral hedge    
+19
+
+The Black-Scholes Analysis (cont’d)
+Γ-neutrality: Let’s Γ-hedge a 3-month 40-strike call with a 4-month 45-strike put:
+20
+
+The Black-Scholes Analysis (cont’d)
+21
+
+Market-Making As Insurance
+Insurance companies have two ways of dealing with unexpectedly large loss claims:
+Hold capital reserves
+Diversify risk by buying reinsurance
+Market-makers also have two analogous ways to deal with excessive losses:
+Hold capital to cushion against less-diversifiable risks
+Reinsure by trading in out-of-the-money options
+When risks are not fully diversifiable, holding capital is inevitable
+

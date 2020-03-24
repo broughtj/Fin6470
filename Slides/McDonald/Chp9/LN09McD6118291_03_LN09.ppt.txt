@@ -1,0 +1,103 @@
+Chapter 9
+Parity and Other Option Relationships
+
+
+IBM Option Quotes
+
+Put-Call Parity
+For European options with the same strike price and time to expiration the parity relationship is
+Call – put = PV (forward price – strike price)
+or
+Intuition
+Buying a call and selling a put with the strike equal to the forward price (F0,T = K) creates a synthetic forward contract and hence must have a zero price
+3
+
+Parity for Options on Stocks
+If underlying asset is a stock and PV0,T(Div) is the present value of the dividends payable over the life of the option, then e-rT F0,T = S0 – PV0,T (Div), therefore
+Rewriting above
+For index options,                              , therefore
+4
+
+Parity for Options on Stocks (cont’d)
+Examples 9.1 & 9.2
+Price of a non-dividend-paying stock: $40, r=8%, option strike price: $40, time to expiration: 3 months, European call: $2.78, European put: $1.99.       $2.78=$1.99+$40 – $40e -0.08x0.25
+Additionally, if the stock pays $5 just before expiration, call: $0.74, and put: $4.85.      $0.74-$4.85=($40 – $5e-0.08x0.25) – $40e-0.08x0.25
+Synthetic security creation using parity
+Synthetic stock: buy call, sell put, lend PV of strike and dividends
+Synthetic T-bill: buy stock, sell call, buy put (conversion)
+Synthetic call: buy stock, buy put, borrow PV of strike and dividends 
+Synthetic put: sell stock, buy call, lend PV of strike and dividends
+5
+
+Generalized Parity Relationship
+6
+
+Properties of Option Prices
+European versus American Options
+Since an American option can be exercised at anytime, whereas a European option can only be exercised at expiration, an American option must always be at least as valuable as an otherwise identical European option
+CAmer(S, K, T) > CEur(S, K, T) 
+PAmer(S, K, T) > PEur(S, K, T)
+7
+
+Properties of Option Prices (cont’d)
+Maximum and Minimum Option Prices
+Call price cannot
+be negative
+exceed stock price
+be less than price implied by put-call parity using zero for put price:
+
+Put price cannot
+be more than the strike price
+be less than price implied by put-call parity using zero for put price:
+8
+
+Properties of Option Prices (cont’d)
+Early exercise for American options
+An American call option on a non-dividend-paying stock should not be exercised early, because
+That means, one would lose money be exercising early instead of selling the option
+If there are dividends, it may be optimal to exercise early, just prior to a dividend  
+It may be optimal to exercise a non-dividend-paying put option early if the underlying stock price is sufficiently low
+9
+
+Properties of Option Prices (cont’d)
+Time to Expiration
+An American option (both put and call) with more time to expiration is at least as valuable as an American option with less time to expiration.  This is because the longer option can easily be converted into the shorter option by exercising it early
+A European call option on a non-dividend-paying stock will be more valuable than an otherwise identical option with less time to expiration. 
+European call options on dividend-paying stock and European puts may be less valuable than an otherwise identical option with less time to expiration
+When the strike price grows at the rate of interest, European call and put prices on a non-dividend-paying stock increases with time to maturity
+10
+
+Properties of Option Prices (cont’d)
+Different strike prices (K1 < K2 < K3), for both European and American options
+A call with a low strike price is at least as valuable as an otherwise identical call with higher strike price
+
+A put with a high strike price is at least as valuable as an otherwise identical call with low strike price
+
+The premium difference between otherwise identical calls with different strike prices cannot be greater than the difference in strike prices
+11
+
+Properties of Option Prices (cont’d)
+Different strike prices (K1 < K2 < K3), for both European and American options
+The premium difference between otherwise identical puts with different strike prices cannot be greater than the difference in strike prices
+
+Premiums decline at a decreasing rate for calls with progressively higher strike prices.  (Convexity of option price with respect to strike price)
+12
+
+Properties of Option Prices (cont’d)
+13
+
+Properties of Option Prices (cont’d)
+14
+
+Properties of Option Prices (cont’d)
+15
+
+Properties of Option Prices (cont’d)
+16
+
+Summary of Parity Relationships
+17
+
+
+
+

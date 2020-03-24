@@ -1,0 +1,370 @@
+Chapter 10
+Binomial Option Pricing: Basic Concepts
+
+
+Introduction to Binomial Option Pricing
+The binomial option pricing model enables us to determine the price of an option, given the characteristics of the stock or other underlying asset
+The binomial option pricing model assumes that the price of the underlying asset follows a binomial distribution—that is, the asset price in each period can move only up or down by a specified amount
+The binomial model is often referred to as the “Cox-Ross-Rubinstein pricing model”
+2
+
+A One-Period Binomial Tree
+Example
+Consider a European call option on the stock of XYZ, with a $40 strike and 1 year to expiration
+XYZ does not pay dividends, and its current price is $41
+The continuously compounded risk-free interest rate is 8%
+The following figure depicts possible stock prices over 1 year, i.e., a binomial tree
+                            $60
+  $41   
+                            $30
+3
+
+Computing the Option Price
+Next, consider two portfolios
+Portfolio A: buy one call option
+Portfolio B: buy 2/3 shares of XYZ and borrow $18.462 at the risk-free rate
+Costs
+Portfolio A: the call premium, which is unknown
+Portfolio B: 2/3 × $41 – $18.462 = $8.871
+4
+
+Computing the Option Price (cont’d)
+Payoffs:
+Portfolio A:			Stock Price in 1 Year
+							$30	$60
+					Payoff 	  	  0	$20
+
+Portfolio B:			Stock Price in 1 Year
+							$30	$60
+	2/3 purchased shares			$20	$40
+	Repay loan of $18.462		        – $20   –$20
+	Total payoff				  0	 $20
+5
+
+Computing the Option Price (cont’d)
+Portfolios A and B have the same payoff. Therefore
+Portfolios A and B should have the same cost. Since Portfolio B costs $8.871, the price of one option must be $8.871
+There is a way to create the payoff to a call by buying shares and borrowing. Portfolio B is a synthetic call
+One option has the risk of 2/3 shares. The value 2/3 is the delta (Δ) of the option: the number of shares that replicates the option payoff
+
+The Binomial Solution
+How do we find a replicating portfolio consisting of Δ shares of stock and a dollar amount B in lending, such that the portfolio imitates the option whether the stock rises or falls?
+Suppose that the stock has a continuous dividend yield of δ, which is reinvested in the stock. Thus, if you buy one share at time t, at time t+h you will have eδh shares
+If the length of a period is h, the interest factor per period is erh
+uS denotes the stock price when the price goes up, and dS denotes the stock price when the price goes down
+
+The Binomial Solution (cont’d)
+Stock price tree:	 	  ∙ Corresponding tree for 				     the value of the option:
+			uS 					Cu
+	S 				 	C 
+			dS							Cd
+
+Note that u (d) in the stock price tree is interpreted as one plus the rate of capital gain (loss) on the stock if it goes up (down)
+The value of the replicating portfolio at time h, with stock price Sh, is
+8
+
+The Binomial Solution (cont’d)
+At the prices Sh = uS and Sh = dS, a successful replicating portfolio will satisfy
+Solving for Δ and B gives
+(10.1) 
+(10.2)
+9
+
+The Binomial Solution (cont’d)
+The cost of creating the option is the net cash flow required to buy the shares and bonds. Thus, the cost of the option is ΔS+B
+(10.3)
+The no-arbitrage condition is 
+(10.4)
+10
+
+Arbitraging a Mispriced Option
+If the observed option price differs from its theoretical price, arbitrage is possible
+If an option is overpriced, we can sell the option. However, the risk is that the option will be in the money at expiration, and we will be required to deliver the stock. To hedge this risk, we can buy a synthetic option at the same time we sell the actual option
+If an option is underpriced, we buy the option. To hedge the risk associated with the possibility of the stock price falling at expiration, we sell a synthetic option at the same time
+11
+
+A Graphical Interpretation of the Binomial Formula
+The portfolio describes a line with the formula 
+Where Ch and Sh are the option and stock value after one binomial period, and supposing δ = 0
+We can control the slope of a payoff diagram by varying the number of shares, Δ, and its height by varying the number of bonds, B
+Any line replicating a call will have a positive slope (Δ > 0) and negative intercept (B < 0). (For a put, Δ < 0 and B > 0)
+12
+
+A Graphical Interpretation of the Binomial Formula (cont’d)
+
+Risk-Neutral Pricing
+We can interpret the terms (e(r–δ)h – d )/(u – d) and (u – e(r–δ)h )/(u – d) as probabilities
+Let 
+(10.5)
+Then equation (10.3) can then be written as 
+(10.6)
+We call p* is the risk-neutral probability of an increase in the stock price
+14
+
+Summary
+In order to price an option, we need to know 
+Stock price
+Strike price
+Standard deviation of returns on the stock
+Dividend yield
+Risk-free rate
+Using the risk-free rate and σ, we can approximate the future distribution of the stock by creating a binomial tree using equation (10.9)
+Once we have the binomial tree, it is possible to price the option using equation (10.3)
+15
+
+Continuously Compounded Returns
+Some important properties of continuously compounded returns
+The logarithmic function computes returns from prices
+
+
+The exponential function computes prices from returns
+
+
+Continuously compounded returns are additive
+16
+
+Volatility
+Suppose the continuously compounded return over month i is rmonthly,i. Since returns are additive, the annual return is
+
+
+The variance of the annual return is
+(10.13)
+17
+
+The Standard Deviation of Continuously Compounded Returns (cont’d)
+Suppose that returns are uncorrelated over time and that each month has the same variance of returns. Then from equation (10.13) we have
+	σ2 = 12 × σ2monthly
+	where σ2 denotes the annual variance
+Taking the square root of both sides yields
+To generalize this formula, if we split the year into n periods of length h (so that h = 1/n), the standard deviation over the period of length h, σh, is
+	(10.15)
+18
+
+Constructing u and d
+In the absence of uncertainty, a stock must appreciate at the risk-free rate less the dividend yield. Thus, from time t to time t+h, we have
+The stock price next period equals the forward price
+19
+
+Constructing u and d (cont’d)
+With uncertainty, the stock price evolution is
+	(10.17)
+Where σ  is the annualized standard deviation of the continuously compounded return, and σ√h is standard deviation over a period of length h
+We can also rewrite (10.17) as 
+(10.9)
+We refer to a tree constructed using equation (10.9) as a “forward tree.”
+20
+
+Estimating Historical Volatility
+We need to decide what value to assign to σ, which we cannot observe directly
+One possibility is to measure σ by computing the standard deviation of continuously compounded historical returns
+Volatility computed from historical stock returns is historical volatility
+For example, calculate the standard deviation with weekly data, then annualize the result by using equation (10.15)
+For standard options, the volatility that matters excludes dividends
+21
+
+Estimating Historical Volatility (cont’d)
+Example
+22
+
+One-Period Example with aForward Tree
+Consider a European call option on a stock, with a $40 strike and 1 year to expiration. The stock does not pay dividends, and its current price is $41. Suppose the volatility of the stock is 30%
+The continuously compounded risk-free interest rate is 8%
+S = 41, r = 0.08, δ = 0, σ = 0.30, and h = 1
+Use these inputs to
+calculate the final stock prices
+calculate the final option values
+calculate Δ and B
+calculate the option price
+
+
+23
+
+One-Period Example with a Forward Tree (cont’d)
+Calculate the final stock prices
+
+
+Calculate the final option values
+
+
+Calculate Δ and B
+
+
+Calculate the option price
+24
+
+One-Period Example with a Forward Tree (cont’d)
+The following figure depicts the possible stock prices and option prices over 1 year, i.e., a binomial tree
+25
+
+A Two-Period European Call
+We can extend the previous example to price a 2-year option, assuming all inputs are the same as before
+26
+
+A Two-period European Call (cont’d)
+Note that an up move by the stock followed by a down move (Sud) generates the same stock price as a down move followed by an up move (Sdu). This is called a recombining tree. Otherwise, we would have a nonrecombining tree
+
+Pricing the Call Option
+To price an option with two binomial periods, we work backward through the tree
+Year 2, Stock Price=$87.669: since we are at expiration, the option value is max (0, S – K) = $47.669
+Year 2, Stock Price=$48.114: similarly, the option value is $8.114
+Year 2, Stock Price=$26.405: since the option is out of the money, the value is 0
+28
+
+Pricing the Call Option (cont’d)
+Year 1, Stock Price=$59.954: at this node, we compute the option value using equation (10.3), where uS is $87.669 and dS is $48.114
+Year 1, Stock Price=$32.903: again using equation (10.3), the option value is $3.187
+Year 0, Stock Price = $41: similarly, the option value is computed to be $10.737
+29
+
+Pricing the Call Option (cont’d)
+Notice that
+The option price is greater for the 2-year than for the 1-year option
+The option was priced by working backward through the binomial tree
+The option’s Δ and B are different at different nodes. At a given point in time, Δ increases to 1 as we go further into the money
+Permitting early exercise would make no difference. At every node prior to expiration, the option price is greater than S – K; hence, we would not exercise even if the option had been American
+30
+
+Many Binomial Periods
+Dividing the time to expiration into more periods allows us to generate a more realistic tree with a larger number of different values at expiration
+Consider the previous example of the 1-year European call option
+Let there be three binomial periods. Since it is a 1-year call, this means that the length of a period is h = 1/3
+Assume that other inputs are the same as before (so, r = 0.08 and  σ = 0.3)
+31
+
+Many Binomial Periods (cont’d)
+The stock price and option price tree for this option
+32
+
+Many Binomial Periods (cont’d)
+Note that since the length of the binomial period is shorter, u and d are smaller than before: u = 1.2212 and d = 0.8637 (as opposed to 1.462 and 0.803 with h = 1)
+The second-period nodes are computed as follows
+The remaining nodes are computed similarly
+Analogous to the procedure for pricing the 2-year option, the price of the three-period option is computed by working backward using equation (10.3)
+The option price is $7.074
+33
+
+Put Options
+We compute put option prices using the same stock price tree and in almost the same way as call option prices
+The only difference with a European put option occurs at expiration
+Instead of computing the price asmax(0, S – K), we use  max(0, K – S)
+34
+
+Put Options (cont’d)
+A binomial tree for a European put option with 1-year to expiration
+35
+
+American Options
+The value of the option if it is left “alive” (i.e., unexercised) is given by the value of holding it for another period, equation (10.3)
+The value of the option if it is exercised is given by max (0, S – K) if it is a call and max (0, K – S) if it is a put
+For an American put, the value of the option at a node is given by 
+36
+
+American Options (cont’d)
+The valuation of American options proceeds as follows
+At each node, we check for early exercise
+If the value of the option is greater when exercised, we assign that value to the node. Otherwise, we assign the value of the option unexercised
+We work backward through the three as usual
+37
+
+American Options (cont’d)
+Consider an American version of the put option valued in the previous example
+38
+
+American Options (cont’d)
+The only difference in the binomial tree occurs at the Sdd node, where the stock price is $30.585. The American option at that point is worth $40 – $30.585 = $9.415, its early-exercise value (as opposed to $8.363 if unexercised). The greater value of the option at that node ripples back through the tree
+Thus, the American option is more valuable than the otherwise equivalent European option
+39
+
+Options on Other Assets
+The binomial model developed thus far can be modified easily to price options on underlying assets other than non-dividend-paying stocks
+The difference for different underlying assets is the construction of the binomial tree and the risk-neutral probability
+We examine options on 
+Stock indexes
+Currencies
+Futures contracts
+Commodities
+Bonds
+
+40
+
+Options on a Stock Index
+Suppose a stock index pays continuous dividends at the rate δ
+The procedure for pricing this option is equivalent to that of the first example, which was used for our derivation. Specifically
+the up and down index moves are given by equation (10.9)
+the replicating portfolio by equation (10.1) and (10.2)
+the option price by equation (10.3)
+the risk-neutral probability by equation (10.5)
+41
+
+Options on a Stock Index (cont’d)
+A binomial tree for an American call option on a stock index:
+42
+
+Options on Currencies
+With a currency with spot price x0, the forward price is
+Where rf  is the foreign interest rate
+Thus, we construct the binomial tree using
+43
+
+Options on Currencies (cont’d)
+Investing in a “currency” means investing in a money-market fund or fixed income obligation denominated in that currency
+Taking into account interest on the foreign-currency denominated obligation, the two equations are
+The risk-neutral probability of an up move is
+(10.20)
+44
+
+Options on Currencies (cont’d)
+Consider a dollar-denominated American put option on the euro, where
+The current exchange rate is $1.05/€
+The strike is $1.10/€
+The euro-denominated interest rate is 3.1%
+The dollar-denominated rate is 5.5%
+45
+
+Options on Currencies (cont’d)
+The binomial tree for the American put option on the euro
+46
+
+Options on Futures Contracts
+Assume the forward price is the same as the futures price
+The nodes are constructed as
+We need to find the number of futures contracts, Δ, and the lending, B, that replicates the option
+A replicating portfolio must satisfy
+47
+
+Options on Futures Contracts (cont’d)
+Solving for Δ and B gives
+Δ tells us how many futures contracts to hold to hedge the option, and B is simply the value of the option
+We can again price the option using equation (10.3)
+The risk-neutral probability of an up move is given by 
+(10.21)
+48
+
+Options on Futures Contracts (cont’d)
+The motive for early-exercise of an option on a futures contract is the ability to earn interest on the mark-to-market proceeds
+When an option is exercised, the option holder pays nothing, is entered into a futures contract, and receives mark-to-market proceeds of the difference between the strike price and the futures price
+
+Options on Futures Contracts (cont’d)
+A tree for an American call option on a   futures contract 
+50
+
+Options on Commodities
+It is possible to have options on a physical commodity
+If there is a market for lending and borrowing the commodity, then pricing such an option is straightforward
+In practice, however, transactions in physical commodities often have greater transaction costs than for financial assets, and short-selling a commodity may not be possible
+From the perspective of someone synthetically creating the option, the commodity is like a stock index, with the lease rate equal to the dividend yield
+51
+
+Options on Bonds
+Bonds are like stocks that pay a discrete dividend (a coupon)
+Bonds differ from the other assets in two respects
+The volatility of a bond decreases over time as the bond approaches maturity
+The assumptions that interest rates are the same for all maturities and do not change over time are logically inconsistent for pricing options on bonds
+52
+
+Summary
+Pricing options with different underlying assets requires adjusting the risk-neutral probability for the borrowing cost or lease rate of the underlying asset
+Thus, we can use the formula for pricing an option on a stock with an appropriate substitution for the dividend yield
+53
+
+

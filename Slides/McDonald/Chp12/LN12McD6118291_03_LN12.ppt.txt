@@ -1,0 +1,132 @@
+Chapter 12
+The Black-Scholes Formula
+
+Black-Scholes Formula
+The Black-Scholes formula is a limiting case of the binomial formula (infinitely many periods) for the price of a European option.
+Consider an European call (or put) option written on a stock
+Assume that the stock pays dividend at the continuous rate δ
+
+Black-Scholes Formula (cont’d)
+Call Option price
+Put Option price
+where
+						and
+
+Black-Scholes Assumptions
+Assumptions about stock return distribution
+Continuously compounded returns on the stock are normally distributed and independent over time (no “jumps”)
+The volatility of continuously compounded returns is known and constant
+Future dividends are known, either as dollar amount or as a fixed dividend yield
+
+Black-Scholes Assumptions (cont’d)
+Assumptions about the economic environment
+The risk-free rate is known and constant
+There are no transaction costs or taxes
+It is possible to short-sell costlessly and to borrow at the risk-free rate 
+
+Applying the Formula to Other Assets
+Call Options
+where
+						,
+                     and
+
+Options on Stocks with Discrete Dividends
+The prepaid forward price for stock with discrete dividends is
+Examples 12.3 and 12.1
+S = $41, K = $40, σ = 0.3, r = 8%, t = 0.25, Div = $3 in one month
+PV (Div) = $3e-0.08/12 = $2.98
+Use $41– $2.98 = $38.02 as the stock price in BS formula
+The BS European call price is $1.763
+Compare this to European call on stock without dividends: $3.399
+
+Options on Currencies
+The prepaid forward price for  the currency is
+Where x0 is domestic spot rate and rf is foreign interest rate
+Example 12.4
+x0 =  $1.25/   , K = $1.20, σ = 0.10, r = 1%, T = 1, and rf = 3%
+The price of a dollar-denominated euro call is $0.061407
+The price of a dollar-denominated euro put is $0.03641
+
+Options on Futures
+The prepaid forward price for a futures contract is the PV of the futures price.  Therefore
+where
+						and
+Example 12.5: 
+Suppose 1-yr. futures price for natural gas is $6.50/MMBtu, r = 2% 
+Therefore, F=$6.50, K=$6.50, and r = 2% 
+If σ = 0.25, T= 1, call price = put price = $0.63379
+
+Option Greeks
+What happens to the option price when one and only one input changes?
+Delta (Δ): change in option price when stock price increases by $1
+Gamma (Γ): change in delta when option price increases by $1
+Vega: change in option price when volatility increases by 1%
+Theta (θ): change in option price when time to maturity decreases by 1 day
+Rho (ρ): change in option price when interest rate increases by 1%
+Greek measures for portfolios
+The Greek measure of a portfolio is weighted average of Greeks of individual portfolio components
+
+Option Greeks (cont’d)
+
+Option Greeks (cont’d)
+
+Option Greeks (cont’d)
+
+Option Greeks (cont’d)
+
+Option Greeks (cont’d)
+
+Option Greeks (cont’d)
+
+Option Greeks (cont’d)
+Option elasticity (Ω)
+Ω describes the risk of the option relative to the risk of the stock in percentage terms: If stock price (S) changes by 1%, what is the percent change in the value of the option (C)?
+Example 12.8: S = $41, K = $40, σ = 0.30, r = 0.08, T = 1, δ = 0
+Elasticity for call: Ω = S Δ /C = $41 x 0.6911 / $6.961 = 4.071
+Elasticity for put: Ω = S Δ /C = $41 x  – 0.3089 / $2.886 =  – 4.389
+
+Option Greeks (cont’d)
+Option elasticity (Ω) (cont’d)
+The volatility of an option
+The risk premium of an option
+The Sharpe ratio of an option
+where | . | is the absolute value, γ is the expected return on option, α is the expected return on stock, and r is the risk-free rate
+
+Profit Diagrams Before Maturity
+For purchased call option
+
+Profit Diagrams Before Maturity
+For calendar spreads
+
+Implied Volatility
+Volatility is unobservable
+Option prices, particularly for near-the-money options, can be quite sensitive to volatility
+One approach is to compute historical volatility using the history of returns
+A problem with historical volatility is that expected future volatility can be different from historical volatility. 
+Alternatively, we can calculate implied volatility, which is the volatility that, when put into a pricing formula (typically Black-Scholes), yields the observed option price.
+
+Implied Volatility (cont’d)
+In practice implied volatilities of in-, at-, and out-of-the money options are generally different
+A volatility smile refers to when volatility is symmetric, with volatility lowest for at-the-money options, and high for in-the-money and out-of-the-money options
+A difference in volatilities between in-the-money and out-of-the-money options is referred to as a volatility skew
+
+Implied Volatility (cont’d)
+
+Implied Volatility (cont’d)
+Some practical uses of implied volatility include
+Use the implied volatility from an option with an observable price to calculate the price of another option on the same underlying asset
+Use implied volatility as a quick way to describe the level of options prices on a given underlying asset: you could quote option prices in terms of volatility, rather than as a dollar price
+Checking the uniformity of implied volatilities across various options on the same underlying assets allows one to verify the validity of the pricing model in pricing those options
+
+Perpetual American Options
+Perpetual American options (options that never expire) are optimally exercised when the underlying asset ever reaches the optimal exercise barrier (Hc for a call and Hp for a put)
+For a perpetual call option the optimal exercise barrier and price are
+and
+For a perpetual put option the optimal exercise barrier and price are
+and
+	where
+and
+
+
+
+

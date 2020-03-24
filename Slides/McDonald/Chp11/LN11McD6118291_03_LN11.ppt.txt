@@ -1,0 +1,222 @@
+Chapter 11
+Binomial Option Pricing: Selected Topics
+
+Understanding Early Exercise
+Options may be rationally exercised prior to expiration
+By exercising, the option holder
+Receives the stock and thus receives dividends
+Pays the strike price prior to expiration (this has an interest cost)
+Loses the insurance implicit in the call against the possibility that the stock price will be less than the strike price at expiration
+
+Understanding Early Exercise
+If volatility is zero, the value of insurance is zero. Then, it is optimal to defer exercise as long as interest savings on the strike exceed dividends lost
+
+Therefore, it is optimal to exercise when
+	In the special case when r = δ and σ = 0, any in-the-money option should be exercised immediately
+When volatility is positive, the implicit insurance has value that varies with time to expiration
+3
+
+Understanding Early Exercise (Cont’d)
+The following graph displays the price, above which early exercise is optimal for a 5-year call option with K = $100, r = 5%, and δ = 5%
+4
+
+Understanding Early Exercise (Cont’d)
+The following graph displays the price, below which early exercise is optimal for a 5-year put option with K = $100, r = 5%, and δ = 5%
+5
+
+Understanding Risk-Neutral Pricing
+ A risk-neutral investor is indifferent between a sure thing and a risky bet with an expected payoff equal to the value of the sure thing
+p* is the risk-neutral probability that the stock price will go up
+6
+
+Understanding Risk-Neutral Pricing (Cont’d)
+The option pricing formula can be said to price options as if investors are risk-neutral
+Note that we are not assuming that investors are actually risk-neutral, and that risky assets are actually expected to earn the risk-free rate of return
+7
+
+Pricing an Option Using Real Probabilities
+Is option pricing consistent with standard discounted cash flow calculations?
+Yes. However, discounted cash flow is not used in practice to price options
+This is because it is necessary to compute the option price in order to compute the correct discount rate
+8
+
+Pricing an Option Using Real Probabilities (cont’d)
+Suppose that the continuously compounded expected return on the stock is α and that the stock does not pay dividends
+If p is the true probability of the stock going up, p must be consistent with u, d, and α
+
+(11.3)
+Solving for p gives us
+(11.4)
+9
+
+Pricing an Option Using Real Probabilities (cont’d)
+Using p, the actual expected payoff to the option one period hence is 
+(11.5)
+At what rate do we discount this expected payoff?
+It is not correct to discount the option at the expected return on the stock, α, because the option is equivalent to a leveraged investment in the stock and hence is riskier than the stock
+10
+
+Pricing an Option Using Real Probabilities (cont’d)
+Denote the appropriate per-period discount rate for the option as γ
+Since an option is equivalent to holding a portfolio consisting of Δ shares of stock and B bonds, the expected return on this portfolio is 
+(11.6)
+11
+
+Pricing an Option Using Real Probabilities (cont’d)
+We can now compute the option price as the expected option payoff, equation(11.5), discounted at the appropriate discount rate, given by equation (11.6). This gives 
+(11.7)
+12
+
+Pricing an Option Using Real Probabilities (cont’d)
+It turns out that this gives us the same option price as performing the risk-neutral calculation
+Note that it does not matter whether we have the “correct” value of α to start with
+Any consistent pair of α and γ will give the same option price
+Risk-neutral pricing is valuable because setting α = r results in the simplest pricing procedure.
+13
+
+The Binomial Tree and Lognormality
+The usefulness of the binomial pricing model hinges on the binomial tree providing a reasonable representation of the stock price distribution
+The binomial tree approximates a lognormal distribution
+14
+
+The Random Walk Model
+It is sometimes said that stock prices follow a random walk
+Imagine that we flip a coin repeatedly 
+Let the random variable Y denote the outcome of the flip 
+If the coin lands displaying a head, Y = 1; otherwise, Y = – 1
+If the probability of a head is 50%, we say the coin is fair
+After n flips, with the ith flip denoted Yi, the cumulative total, Zn, is
+(11.8)
+It turns out that the more times we flip, on average the farther we will move from where we start
+15
+
+The Random Walk Model (cont’d)
+We can represent the process followed by Zn in term of the change in Zn
+Zn – Zn-1 = Yn
+or
+Heads: Zn – Zn-1 = +1
+Tails: Zn – Zn-1 = –1
+16
+
+The Random Walk Model (cont’d)
+A random walk, where with heads, the change in Z is 1, and with tails, the change in Z is – 1
+17
+
+The Random Walk Model (cont’d)
+The idea that asset prices should follow a random walk was articulated in Samuelson (1965)
+In efficient markets, an asset price should reflect all available information. In response to new information the price is equally likely to move up or down, as with the coin flip
+The price after a period of time is the initial price plus the cumulative up and down movements due to informational surprises
+18
+
+Modeling Stock Prices As a Random Walk
+The above description of a random walk is not a satisfactory description of stock price movements. There are at least three problems with this model
+If by chance we get enough cumulative down movements, the stock price will become negative
+The magnitude of the move ($1) should depend upon how quickly the coin flips occur and the level of the stock price
+The stock, on average, should have a positive return. The random walk model taken literally does not permit this
+The binomial model is a variant of the random walk model that solves all of these problems at once
+
+The Binomial Model
+The binomial model is	
+Taking logs, we obtain	
+(11.11)
+Since ln(St+h/St) is the continuously compounded return from t to t + h, the binomial model is simply a particular way to model the continuously compounded return
+That return has two parts, one of which is certain, (r–δ)h, and the other of which is uncertain and generates the up and down stock prices moves (plus or minus σ√h)
+
+The Binomial Model (cont’d)
+Equation (11.11) solves the three problems in the random walk
+The stock price cannot become negative
+As h gets smaller, up and down moves get smaller
+There is a (r – δ)h term, and we can choose the probability of an up move, so we can guarantee that the expected change in the stock price is positive
+
+Lognormality and the Binomial Model
+The binomial tree approximates a lognormal distribution, which is commonly used to model stock prices
+The lognormal distribution is the probability distribution that arises from the assumption that continuously compounded returns on the stock are normally distributed
+With the lognormal distribution, the stock price is positive, and the distribution is skewed to the right, that is, there is a chance that extremely high stock prices will occur
+22
+
+Lognormality and the BinomialModel (cont’d)
+The binomial model implicitly assigns probabilities to the various nodes.
+23
+
+Lognormality and the Binomial Model (cont’d)
+The following graph compares the probability distribution for a 25-period binomial tree with the corresponding lognormal distribution
+24
+
+Alternative Binomial Trees
+There are other ways besides equation (11.11) to construct a binomial tree that approximates a lognormal distribution
+An acceptable tree must match the standard deviation of the continuously compounded return on the asset and must generate an appropriate distribution as h → 0
+Different methods of constructing the binomial tree will result in different u and d stock movements
+No matter how we construct the tree, we use
+	to determine the risk-neutral probability and 
+    to determine the option value
+25
+
+Alternative Binomial Trees (cont’d)
+The Cox-Ross-Rubinstein binomial tree
+The tree is constructed as 
+(11.13)
+A problem with this approach is that if h is large or σ is small, it is possible that	            , in which case the binomial tree violates the restriction of 
+In real applications, h would be small, so the above problem does not occur
+26
+
+Alternative Binomial Trees (cont’d)
+The lognormal tree
+The tree is constructed as 
+(11.14) 
+All three methods of constructing a binomial tree yield different option prices for finite n, but they approach the same price as n → ∞
+27
+
+Is the Binomial Model Realistic?
+The binomial model is a form of the random walk model, adapted to modeling stock prices. The lognormal random walk model in this section assumes among other things, that
+Volatility is constant
+“Large” stock price movements do not occur
+Returns are independent over time
+All of these assumptions appear to be violated in the data
+28
+
+Stock Paying Discrete Dividends
+Suppose that a dividend will be paid between times t and t + h and that its future value at time t + h is D
+The time t forward price for delivery at t + h is
+
+Since the stock price at time t + h will be ex-dividend, we create the up and down moves based on the ex-dividend stock price
+(11.15)
+29
+
+Stock Paying Discrete Dividends (cont’d)
+When a dividend is paid, we have to account for the fact that the stock earns the dividend
+The solution is 
+Because the dividend is known, we decrease the bond position by the present value of the certain dividend
+30
+
+Problems With the Discrete Dividend Tree
+The conceptual problem with equation (11.15) is that the stock price could in principle become negative if there have been large downward moves in the stock prior to the dividend
+The practical problem is that the tree does not completely recombine after a discrete dividend
+The following tree, where a $5 dividend is paid between periods 1 and 2, demonstrates that with a discrete dividend, the order of up and down movements affects the price
+In the third binomial period, there are six rather than four possible stock prices
+
+Problems With the Discrete Dividend Tree (cont’d)
+32
+
+A Binomial Tree Using the Prepaid Forward
+Schroder (1988) presents a method of constructing a tree for a dividend-paying stock that solves both problems
+If we know for certain that a stock will pay a fixed dividend, then we can view the stock price as being the sum of two components
+The dividend, which is like a zero-coupon bond with zero volatility, and 
+The present value of the ex-dividend value of the stock, i.e., the prepaid forward price
+33
+
+A Binomial Tree Using the Prepaid Forward (cont’d)
+Suppose we know that a stock will pay a dividend D at time TD < T, where T is the expiration date of the option
+We base stock price movements on the prepaid forward price	
+As before, we have up and down movements of	
+The observed stock price at t + h < TD is then
+Assign a volatility to the prepaid forward using the ad hoc adjustment
+
+34
+
+A Binomial Tree Using the Prepaid Forward (cont’d)
+A binomial tree constructed using the prepaid-forward method
+35
+
+
+
+
