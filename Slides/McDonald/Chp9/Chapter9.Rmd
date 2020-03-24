@@ -1,0 +1,20 @@
+---
+title: Finance 6470 - Derivatives Markets 
+subtitle: "Chapter 9: Parity & Other Option Relations"
+author: Tyler J. Brough
+institute: Department of Finance and Economics 
+titlegraphic: ./images/vertical-logo-blue.png
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: ./beamer-template.tex
+    keep_tex: false
+    toc: true
+#    slide_level: 2
+ ioslides_presentation:
+    smaller: true
+#    logo: ~/Dropbox/teaching/clemson-paw-transparent.png
+make149: true
+---
+
+# Section 9.1: Put-Call Parity
