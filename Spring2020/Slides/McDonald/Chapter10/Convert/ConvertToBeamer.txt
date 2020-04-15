@@ -1,0 +1,159 @@
+' this code extracts text from PPT(X) and saves to latex beamer body
+' Provided for free with no guarantees or promises
+'WARNING: this will overwrite files in the powerpoint file's folder if there are name collisiona
+' Original version by Louis from StackExchange (https://tex.stackexchange.com/users/6321/louis) available here: (https://tex.stackexchange.com/questions/66007/any-way-of-converting-ppt-or-odf-to-beamer-or-org)
+' Modified by Jason Kerwin (www.jasonkerwin.com) on 20 February 2018:
+    ' Takes out extra text that printed in the title line
+    ' Switches titles to \frametitle{} instead of including them on the \begin{frame} line (sometimes helps with compiling)
+    ' Changes the image names to remove original filename, which might have spaces
+    ' Removes "\subsection{}" which was printing before each slide
+'NB you must convert your slides to .ppt format before running this code
+
+Public Sub ConvertToBeamer()
+    Dim objPresentation As Presentation
+    Set objPresentation = Application.ActivePresentation
+
+    Dim objSlide As Slide
+    Dim objshape As Shape
+    Dim objShape4Note As Shape
+    Dim hght As Long, wdth As Long
+    Dim objFileSystem
+    Dim objTextFile
+    Dim objGrpItem As Shape
+
+    Dim Name As String, Pth As String, Dest As String, IName As String, ln As String, ttl As String, BaseName As String
+    Dim txt As String
+    Dim p As Integer, l As Integer, ctr As Integer, i As Integer, j As Integer
+    Dim il As Long, cl As Long
+    Dim Pgh As TextRange
+
+    Name = Application.ActivePresentation.Name
+    p = InStr(Name, ".ppt")
+    l = Len(Name)
+    If p + 3 = l Then
+      Mid(Name, p) = ".txt"
+    Else
+      Name = Name & ".txt"
+    End If
+    BaseName = Left(Name, l - 4)
+    Pth = Application.ActivePresentation.Path
+    Dest = Pth & "\" & Name
+    ctr = 0
+    Set objFileSystem = CreateObject("Scripting.FileSystemObject")
+
+    Set objTextFile = objFileSystem.CreateTextFile(Dest, True, True)
+    objTextFile.WriteLine "\section{" & Name & "}"
+    With Application.ActivePresentation.PageSetup
+        wdth = .SlideWidth
+        hght = .SlideHeight
+    End With
+
+
+    For Each objSlide In objPresentation.Slides
+        objTextFile.WriteLine ""
+        ttl = "No Title"
+        If objSlide.Shapes.HasTitle Then
+          ttl = objSlide.Shapes.Title.TextFrame.TextRange.Text
+        End If
+        ' objTextFile.WriteLine "\subsection{" & ttl & "}"
+        objTextFile.WriteLine "\begin{frame}"
+        objTextFile.WriteLine "\frametitle{" & ttl & "}"
+       
+        For Each objshape In objSlide.Shapes
+
+            If objshape.HasTextFrame = True Then
+                If Not objshape.TextFrame.TextRange Is Nothing Then
+                    il = 0
+                    For Each Pgh In objshape.TextFrame.TextRange.Paragraphs
+
+                        If Not objshape.TextFrame.TextRange.Text = ttl Then
+                            cl = Pgh.Paragraphs.IndentLevel
+                            txt = Pgh.TrimText
+                            txt = Replace(txt, "&", "\&")
+                            If cl > il Then
+                               objTextFile.WriteLine "\begin{itemize}"
+                                il = cl
+                            ElseIf cl < il Then
+                                objTextFile.WriteLine "\end{itemize}"
+                                il = cl
+                            End If
+                            If il = 0 Then
+                                objTextFile.WriteLine txt
+                            Else
+                                objTextFile.WriteLine "\item " + txt
+                            End If
+                        End If
+                    Next Pgh
+                    If il > 0 Then
+                      For i = 1 To il
+                        objTextFile.WriteLine "\end{itemize}"
+                      Next i
+                    End If
+                End If
+            ElseIf objshape.HasTable Then
+              ln = "\begin{tabular}{|"
+              For j = 1 To objshape.Table.Columns.Count
+              ln = ln & "l|"
+              Next j
+              ln = ln & "} \hline"
+              objTextFile.WriteLine ln
+              With objshape.Table
+                For i = 1 To .Rows.Count
+                    If .Cell(i, 1).Shape.HasTextFrame Then
+                        ln = .Cell(i, 1).Shape.TextFrame.TextRange.Text
+                    End If
+
+                    For j = 2 To .Columns.Count
+                        If .Cell(i, j).Shape.HasTextFrame Then
+                            ln = ln & " & " & .Cell(i, j).Shape.TextFrame.TextRange.Text
+                        End If
+                    Next j
+                    ln = ln & "  \\ \hline"
+                    objTextFile.WriteLine ln
+                Next i
+                objTextFile.WriteLine "\end{tabular}" & vbCrLf
+              End With
+            ElseIf (objshape.Type = msoGroup) Then
+                For Each objGrpItem In objshape.GroupItems
+                    If objGrpItem.HasTextFrame = True Then
+                        If Not objGrpItem.TextFrame.TextRange Is Nothing Then
+                           shpx = objGrpItem.Top / hght
+                           shpy = objGrpItem.Left / wdth
+                           ' this could need adjustment (Footers textblocks)
+                           If shpx < 0.1 And shpy > 0.5 Then
+                            objTextFile.WriteLine ("%BookTitle: " & objGrpItem.TextFrame.TextRange.Text)
+                            ElseIf shpx < 0.1 And shpy < 0.5 Then
+                            objTextFile.WriteLine ("%FrameTitle: " & objGrpItem.TextFrame.TextRange.Text)
+                            Else
+                            objTextFile.WriteLine ("%PartTitle: " & objGrpItem.TextFrame.TextRange.Text)
+                           End If
+                        End If
+                    End If
+                 Next objGrpItem
+            ElseIf (objshape.Type = msoPicture) Then
+                IName = "img" & Format(ctr, "0000") & ".png"
+                objTextFile.WriteLine "\includegraphics{" & IName & "}"
+                Call objshape.Export(Pth & "\" & IName, ppShapeFormatPNG, , , ppRelativeToSlide)
+                ctr = ctr + 1
+            ElseIf objshape.Type = msoEmbeddedOLEObject Then
+                If objshape.OLEFormat.ProgID = "Equation.3" Then
+                    IName = "img" & Format(ctr, "0000") & ".png"
+                    objTextFile.WriteLine "\includegraphic{" & IName & "}"
+                    Call objshape.Export(Pth & "\" & IName, ppShapeFormatPNG, , , ppRelativeToSlide)
+                    ctr = ctr + 1
+                End If
+            End If
+        Next objshape
+
+
+        objTextFile.WriteLine vbCrLf & "\end{frame}" & vbCrLf
+        'to test on the first 3 slides
+        'If objSlide.SlideIndex >= 3 Then
+        '    Exit For
+        'End If
+    Next objSlide
+
+    objTextFile.Close
+    Set objTextFile = Nothing
+    Set objFileSystem = Nothing
+End Sub
