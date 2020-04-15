@@ -1,6 +1,6 @@
 ---
-title: Finance 6470 - Derivatives Markets 
-subtitle: "Chapter 9: Parity & Other Option Relations"
+title: "Chapter 9: Parity & Other Option Relations" 
+subtitle: Finance 6470 - Derivatives Markets 
 author: Tyler J. Brough
 institute: Department of Finance and Economics 
 titlegraphic: ./images/vertical-logo-blue.png
@@ -18,3 +18,12 @@ make149: true
 ---
 
 # Section 9.1: Put-Call Parity
+
+## Chapter 9
+
+\LARGE Parity and Other Option Relationships
+
+
+## IBM Option Quotes
+
+![](images/Table-9-1.png)
