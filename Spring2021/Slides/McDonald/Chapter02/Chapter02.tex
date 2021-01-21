@@ -206,7 +206,294 @@
 \begin{document}
 \frame{\titlepage}
 
-\begin{frame}
+\begin{frame}{Introduction}
+\protect\hypertarget{introduction}{}
+\begin{itemize}
+\tightlist
+\item
+  Basic derivatives contracts
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Forward contracts (long \& short)
+  \item
+    Call options
+  \item
+    Put options
+  \end{itemize}
+\item
+  Types of positions
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Long position (buyer)
+  \item
+    Short position (seller)
+  \end{itemize}
+\item
+  Graphical representation
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Payoff diagrams (does not take into account upfront costs)
+  \item
+    Profit diagrams
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Forward Contracts}
+\protect\hypertarget{forward-contracts}{}
+\begin{itemize}
+\item
+  Definition: a binding agreement (obligation) to buy or sell an
+  underlying asset in the future, at a price set today
+\item
+  Futures contracts are the same as forwards in principle except for
+  some institutional and pricing differences
+
+  \begin{itemize}
+  \tightlist
+  \item
+    (futures are traded on an exchange and are marked-to-market daily)
+  \end{itemize}
+\item
+  A forward contract specifies
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The features and quantity of the asset to be delivered
+  \item
+    The delivery logistics, such as time, date, and place
+  \item
+    The price the buyer will pay at the time of delivery
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Payoff on a Forward Contract}
+\protect\hypertarget{the-payoff-on-a-forward-contract}{}
+\begin{itemize}
+\item
+  Payoff for a contract is its value at expiration
+\item
+  Payoff for
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Long forward: \(S_{T} - F_{0,T}\)
+  \item
+    Short forward: \(F_{0,T} - S_{T}\)
+  \end{itemize}
+\item
+  Example 2.1 S\&R (special and rich) index
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Payoff Diagrams for Forwards}
+\protect\hypertarget{payoff-diagrams-for-forwards}{}
+\end{frame}
+
+\begin{frame}{Forward Versus Outright Purchase}
+\protect\hypertarget{forward-versus-outright-purchase}{}
+\vspace{50mm}
+
+\[
+\begin{aligned}
+\mbox{Forward} + \mbox{bond} &= \mbox{Spot price at expiration} - \$1,020 + \$1,020 \\
+                             &= \mbox{Spot price at expiration}
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Additional Considerations}
+\protect\hypertarget{additional-considerations}{}
+\begin{itemize}
+\tightlist
+\item
+  Type of settlement
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Cash settlement: less costly and more practical
+  \item
+    Physical delivery: often avoided due to significant costs
+  \end{itemize}
+\item
+  Credit risk of the counter pary
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Major issue for over-the-counter contracts
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Credit check, collateral, bank letter of credit
+    \end{itemize}
+  \item
+    Less severe for exchange-traded contracts
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Exchange guarantees transactions, requires collateral
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Call Options}
+\protect\hypertarget{call-options}{}
+\begin{itemize}
+\item
+  A non-binding agreement (right but not an obligation) to buy an asset
+  in the future, at a price set today
+\item
+  Preserves the upside potential, while at the same time eliminating the
+  unpleasant downside (for the buyer)
+\item
+  The seller of a call option is obligated to deliver if asked (the long
+  position of the option holds the optionality)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Examples}
+\protect\hypertarget{examples}{}
+\end{frame}
+
+\begin{frame}{Definition and Terminology}
+\protect\hypertarget{definition-and-terminology}{}
+\begin{itemize}
+\item
+  A call option gives the owner the right but not the obligation to buy
+  the underlying asset at a predetermined price during a predetermined
+  time period
+\item
+  Strike (or exercise) price: the amount paid by the option buyer for
+  the asset if she decides to exercise
+\item
+  Exercise: the act of paying the strike price to buy the asset
+\item
+  Expiration (expiry): the date by which the option must be exercised
+
+  \begin{itemize}
+  \tightlist
+  \item
+    European: can be exercised only at expiration date
+  \item
+    American: can be exercised at any time before expiration
+  \item
+    Burmudan: can be exercised during specified periods
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Payoff/Profit of a Long Call Position (Purchased)}
+\protect\hypertarget{payoffprofit-of-a-long-call-position-purchased}{}
+\begin{itemize}
+\item
+  \(\mbox{Long call payoff} = \max{\{0, S_{T} - K\}}\)
+\item
+  Profit = Payoff - future value of option premium
+\item
+  Examples
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
+\begin{frame}{Diagrams for Purchased Call}
+\protect\hypertarget{diagrams-for-purchased-call}{}
+\end{frame}
+
+\begin{frame}{Payoff \& Profit of a Short Call Position (Written)}
+\protect\hypertarget{payoff-profit-of-a-short-call-position-written}{}
+\begin{itemize}
+\item
+  \(\mbox{Short call payoff} = -\max{\{0, S_{T} - K\}}\)
+\item
+  Profit = Payoff + future value of option premium
+\item
+  Example 2.7
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
+\begin{frame}{Put Options}
+\protect\hypertarget{put-options}{}
+\begin{itemize}
+\item
+  A put option gives the owner the right but now the obligation to sell
+  the underlying asset at a predetermined price during a predetermined
+  time period
+\item
+  The seller of a put option is obligated to buy if asked
+\item
+  Payoff/profit of a long put (purchased)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\mbox{Long put payoff} = \max{\{0, K - S_{T}\}}\)
+  \item
+    Profit = Payoff - future value of option premium
+  \end{itemize}
+\item
+  Payoff/profit of a short put (written)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\mbox{Short put payoff} = -\max{\{0, K - S_{T}\}}\)
+  \item
+    Profit = Payoff + future value of option premium
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Put Option Examples}
+\protect\hypertarget{put-option-examples}{}
+\end{frame}
+
+\begin{frame}{Profit for a Long Put Position}
+\protect\hypertarget{profit-for-a-long-put-position}{}
+\end{frame}
+
+\begin{frame}{A Few Items to Note}
+\protect\hypertarget{a-few-items-to-note}{}
+\begin{itemize}
+\item
+  A call option becomes more profitable when the underlying asset
+  appreciates in value
+\item
+  A put option becomes more profitable when the underlying asset
+  depreciates in value
+\item
+  Moneyness:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In-the-money (ITM): positive payoff if exercised immediately
+  \item
+    At-the-money (ATM): zero payoff if exercised immediately
+  \item
+    Out-of-the-money: (OTM): negative payoff if exercised immediately
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Option and Forward Positions: A Summary}
+\protect\hypertarget{option-and-forward-positions-a-summary}{}
 \end{frame}
 
 
