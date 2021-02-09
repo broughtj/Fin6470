@@ -1,0 +1,100 @@
+---
+title: "FIN 6470 - Homework Chapter 5"
+author: "Tyler J. Brough"
+date: "February 9, 2020"
+output: pdf_document
+---
+
+## __Numerical Workout Problems__
+
+\vspace{10mm}
+
+__5.1__ Construct Table 5.1 from the perspective of a seller, providing a descriptive name for each of the transactions. 
+
+\vspace{5mm}
+
+__5.2__ A $\$50$ stock pays a $\$1$ dividend every $3$ months, with the first dividend coming $3$ months from today. The
+        continuously compounded risk-free rate is $6\%$.
+
+- __(a)__ What is the price of a prepaid forward contract that expires $1$ year from today, immediately after the
+	  fourth-quarter dividend?
+
+- __(b)__ What is the price of a forward contract that expires at the same time? 
+
+\vspace{5mm}
+
+__5.3__ A $\$50$ stock pays an $8\%$ continous dividend. The continuously compounded risk-free rate is $6\%$. 
+
+- __(a)__ What is the price of a prepaid forward contract that expires $1$ year from today? 
+	
+- __(b)__ What is the price of a forward contract that expires at the same time? 
+
+\vspace{5mm}
+
+__5.4__ Suppose the stock price is $\$35$ and the continuously compounded interest rate is $5\%$.
+
+- __(a)__ What is the $6$-month forward price, assuming dividends are zero? 
+
+- __(b)__ If the $6$-month forward price is $\$35.50$, what is the annualized forward premium? 
+
+- __(c)__ If the forward price $\$35.50$, what is the annualized continuous dividend yield?
+
+
+\vspace{5mm}
+
+__5.5__ Suppose you are a market-maker in S&R index forward contracts. The S&R index spot price is $1100$, the risk-free
+        rate is $5\%$, and the dividend yield on the index is $0$.
+
+- __(a)__ What is the no-arbitrage forward price for delivery in $9$ months? 
+
+- __(b)__ Suppose a customer wishes to enter a short index future position. If you take the opposite position, demonstrate
+          how you would hedge your resulting long position using the index and borrowing or lending. 
+
+- __(c)__ Suppose a customer wishes to enter a long index futures position. If you take the opposite position, demonstrate
+          how you would hedge your resulting short position using the index and borrowing or lending.
+
+\vspace{5mm}
+
+__5.6__ Repeat the previous problem, assuming the dividend yield is $1.5\%$.
+
+
+\vspace{5mm}
+
+__5.7__ The S&R index spot price $1100$, the risk-free rate is $5\%$, and the dividend yield on the index is $0$.
+
+- __(a)__ Suppose you observe a $6$-month forward price of $1135$. What arbitrage would you undertake? 
+
+- __(b)__ Suppose you observe a $6$-month forward price of $1110$. What arbitrage would you undertake? 
+
+\vspace{5mm}
+
+__5.8__ The S&R index spot price is $1100$, the risk-free rate is $5\%$, and the continuous dividend yield on the index is $2\%$.
+
+- __(a)__ Suppose you observe a $6$-month forward price of $1120$. What arbitrage would you undertake? 
+
+- __(b)__ Suppose you observe a $6$-month forward price of $1110$. What arbitrage would you undertake? 
+
+
+\vspace{5mm}
+
+__5.9__ Suppose $10$ years from now it becomes possible for money managers to engage in time travel. In particular, suppose that
+        a money manager could travel to January 1981, when the $1$-year Treasury bill rate was $12.5\%$. 
+
+- __(a)__ If time travel were costless, what riskless arbitrage strategy could a money manager undertake by traveling back and
+          forth between January 1981 and January 1982? 
+
+- __(b)__ If many money managers undertook this strategy, what would you expect to happen to interest rates in 1981? 
+
+- __(c)__ Since interest rates _were_ $12.5\%$ in January 1981, what can you conclude about whether costless time travel will ever
+		  be possible? 
+
+\vspace{5mm}
+
+__5.10__ The S&R index spot price is $1100$ and the continuously compounded risk-free rate is $5\%$. You observe $9$-month forward
+         price of $1129.257$. 
+
+- __(a)__ What dividend yield is implied by this forward price? 
+
+- __(b)__ Suppose you believe the dividend yield over the next $9$ months will be only $0.5\%$. What arbitrage would you undertake? 
+
+- __(c)__ Suppose you believe the dividend yield will be $3\%$ over the next $9$ months. What arbitrage would you undertake? 
