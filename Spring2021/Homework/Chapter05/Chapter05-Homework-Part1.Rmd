@@ -1,0 +1,10 @@
+---
+title: "FIN 6470:j Homework Chapter 5"
+author: "Tyler J. Brough"
+date: "February 5, 2021"
+output: pdf_document
+---
+
+## __Numerical Workout Problems__
+
+

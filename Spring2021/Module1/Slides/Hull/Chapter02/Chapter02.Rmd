@@ -10,8 +10,6 @@ output:
     template: ./beamer-template.tex
     keep_tex: false
     toc: true
- ioslides_presentation:
-    smaller: true
 ---
 
 # Futures Market Mechanics
@@ -42,6 +40,11 @@ output:
    \item[]
    \item \textbf{CH:} separate corp. or dept. associated with each exchange        
 \end{itemize}
+
+
+## A Diagram of Futures Markets
+
+\includegraphics{images/CCP.png}
 
 
 ## Clearninghouse Roles
