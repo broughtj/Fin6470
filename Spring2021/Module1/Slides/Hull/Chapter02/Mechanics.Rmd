@@ -1,0 +1,204 @@
+---
+title: Futures Market Mechanics 
+subtitle: Finance 6470 - Derivatives Markets 
+author: Tyler J. Brough
+institute: Department of Finance and Economics 
+titlegraphic: ./images/vertical-logo-blue.png
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: ./beamer-template.tex
+    keep_tex: false
+    toc: true
+ ioslides_presentation:
+    smaller: true
+---
+
+# Futures Market Mechanics
+
+## Overview of Topics Discussed
+
+\begin{itemize}
+   \item Clearing houses (FCMs, brokers, etc)
+   \item[]
+   \item Margin accounting and marking-to-market
+      \begin{itemize}
+         \item Initial (original)
+         \item Maintenance (variation
+      \end{itemize}
+   \item[]
+   \item Cointegration
+\end{itemize}
+
+
+## Clearninghouse
+
+\begin{itemize}
+   \item Tasked with balancing all futures transactions/money flows
+   \item[]
+   \item Read Williams paper on \textit{Origins of Futures Markets}
+   \item[]
+   \item Modern futures exchange a prime example of spontaneou order
+   \item[]
+   \item \textbf{CH:} separate corp. or dept. associated with each exchange        
+\end{itemize}
+
+
+## Clearninghouse Roles
+
+\begin{itemize}
+   \item CH Roles:
+      \begin{itemize}
+         \item Matches and reconciles all futures transactions
+         \item Assures financial integrity of transactions
+         \item Provides mechanism for delivery
+      \end{itemize}
+   \item[]
+   \item CH becomes obligor to every futures contract (reduces/manages counterparty risk)
+   \item[]
+   \item CH becomes party to and guarantees delivery
+   \item[]
+   \item Only members of exchanges can be clearing members (CM)
+\end{itemize}
+
+
+## Clearninghouses Continued
+
+\begin{itemize}
+   \item CMs deposit large sum of money into a guarantee fund
+      \begin{itemize}
+         \item usually must purchase shares of the corp.
+         \item the guarantee fund is a reserve in case of trader default/bankruptcy
+      \end{itemize}
+   \item[]
+   \item Exchange members who are not CMs must clear trades through a CM
+         and pay a fee for service
+   \item[]
+   \item CMs are large/financially sound companies
+   \item[]
+   \item Maintains market stability and promotes a secure public image
+\end{itemize}
+
+
+## Futures Trading Mechanics
+
+\begin{itemize}
+   \item Pit trading vs LOB
+   \item Traders matched through the brokers in pit, or through the LOB
+   \item CH then becomes the counterparty to each futures contract
+      \begin{itemize}
+         \item CH is long to the shorts
+         \item CH is short to the longs
+         \item CH has no net position (aside from clerical errors)
+            \begin{itemize}
+               \item has a so-called \textit{flat book}
+            \end{itemize}
+      \end{itemize}
+   \item This allows traders to originate and close out positions w/o search for counterparty
+   \item CH transforms forward markets to be impersonal and easy to negotiate
+   \item Traders can hold their positions for long durations while the otherside may turnover very often
+\end{itemize}
+
+
+# Margin Accounting
+
+## Margin Accounting
+
+\begin{itemize}
+   \item CH also performs a banking function
+   \item[]
+   \item Every trader must have an account w/ an FCM (possibly through an IB)
+   \item[]
+   \item For every trade, traders must deposit money called initial (original) margin
+      \begin{itemize}
+         \item Serves as a performance bond
+         \item Both long and short must post margin
+         \item Usually around $10\%$ of position (depends on trader, and volatility of the asset)
+         \item Brokers can require additional margin beyond exchange margin levels if necessary
+      \end{itemize}
+   \item[]
+   \item After initial margin, traders must often post additional deposits to keep a minimum margin level (usually $75\%$ or $80\%$ of initial margin)
+      \begin{itemize}
+         \item Varies by contract (volatility)
+      \end{itemize}
+\end{itemize}
+
+
+## Margin Accounting Continued
+
+\begin{itemize}
+   \item Initial (original) and maintenance (variation) margin applies to members of the clearing corp., who in turn apply it to FCMs, and FCMs duplicate this for their customers (IBs, traders)
+      \begin{itemize}
+         \item FCMs only need to post on their net positions
+         \item FCMs can deposit excess margin in interest bearing securities (a non-trivial source of income)
+      \end{itemize}
+   \item[]
+   \item Margin accounting has the following functions:
+      \begin{itemize}
+         \item guarantee performance on futures contracts
+         \item allows source of funds for daily settlement
+         \item provides the financial integrity of the system
+      \end{itemize}
+\end{itemize}
+
+
+## Marking-to-Market
+
+\begin{itemize}
+   \item \textbf{Settlement price:} final price at the closing bell each day
+      \begin{itemize}
+         \item Each delivery month of each contract has a daily settlement price
+         \item[]
+         \item If a trader's position lost money for that day's trading session (depreciated in value) the CH debits the trader's account that day
+         \item[]
+         \item If the trader's position appreciates the CH credits the trader's account that day
+         \item[]
+         \item Also called \textit{collects} and \textit{pays}
+         \item[]
+         \item This process is called \textit{marking-to-market}
+      \end{itemize}
+\end{itemize}
+
+
+## The Economic Role of Marking-to-Market
+
+\begin{itemize}
+   \item \textbf{Q:} What economic (risk management) role does it play?
+\end{itemize}
+
+
+## Example: Two Traders in Corn Futures
+
+\begin{itemize}
+   \item Long/Short 5000 bushel contract at $\$2.75$ per bushel
+   \item[]
+   \item Initial margin: $\$2000$
+\end{itemize}
+
+
+## Flow of Money Between Accounts 
+
+![](images/Table2-3.png)
+
+
+## Margin Call
+
+\begin{itemize}
+   \item When trader's equity in margin account falls below maintenance level, she receives a margin call from her broker/FCM
+\end{itemize}
+
+
+## A Margin Call and Capital Withdrawal
+
+\begin{itemize}
+   \item 5000 bushel corn contract (long) at $\$2.75$ per bushel
+   \item[]
+   \item Maintenance margin level is $\$1,750$
+   \item[]
+   \item See the actual contract specs: \href{https://www.cmegroup.com/trading/agricultural/grain-and-oilseed/corn_contract_specifications.html}{CME Corn Contract Specifications}
+\end{itemize}
+
+
+## A Margin Call and Capital Withdrawal Continued
+
+![](images/Table2-4.png)
