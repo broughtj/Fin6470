@@ -1,0 +1,663 @@
+---
+title: Chapter 3 - Hedging Strategies Using Futures
+subtitle: (Hull Book OFOD)
+author: Tyler J. Brough
+institute: Department of Finance and Economics 
+titlegraphic: ./images/vertical-logo-blue.png
+fontsize: 11pt
+output:
+ beamer_presentation:
+    template: ./beamer-template.tex
+    keep_tex: false
+    toc: true
+ ioslides_presentation:
+    smaller: true
+---
+
+# Section 3.0: Introduction
+
+## Introduction 
+
+\begin{itemize}
+   \item One kind of participant in futures markets is the \textbf{hedger}.
+   \item[]
+   \item Hedgers use futures markets to transfer risk.
+   \item[]
+   \item A \textbf{perfect hedge} entirely illiminates the risk faced by the hedger. These are very rare!
+   \item[]
+   \item We will want to think carefully about how to measure the performance of a hedge.
+   \item[]
+   \item In this chapter we restrict our attention to \textbf{hedge-and-forget} (or simply static) hedging strategies.
+   \item[]
+   \item At first, we will ignore daily settlement - that is, we will treat futures like forward contracts.
+
+\end{itemize} 
+
+# Section 3.1: Basic Principles
+
+## Basic Principles
+
+Consider the following scenario:
+
+\begin{itemize}
+   \item[]
+   \item A company knows that over the next three months:
+      \begin{itemize}
+	      \item It will gain $\$10,000$ for every $\$0.01$ increase in the price of a commodity.
+	      \item It will lose $\$10,000$ for every $\$0.01$ decrease in the price of a commodity.
+      \end{itemize}
+   \item To hedge the company should take a short futures position.
+      \begin{itemize}
+	      \item For every $0.01$ increase in the price of the commodity:
+            \begin{itemize}
+               \item The futures position will lead to a loss of $\$10,000$
+               \item But the position in the commodity will increase in value by precisely $\$10,000$ to offset the losses.
+            \end{itemize}
+      \end{itemize}
+   \item For every $0.01$ decrease in the price of the commodity:
+      \begin{itemize}
+         \item The futures position will lead to a gain of $\$10,000$
+         \item But the position in the commodity will lose value by $\$10,000$ to offset the gains in the futures contract.
+      \end{itemize}
+\end{itemize}
+
+
+## Short Hedges
+
+\begin{itemize}
+   \item A \textbf{short hedge} is one that involves a short futures position
+   \item[]
+   \item It is appropriate when one has a position in the asset (and expects to sell it in the future)
+   \item[]
+   \item Ex: a rancher who will take cattle to auction in October would use a short hedge to transfer cattle price risk
+\end{itemize}
+
+
+## Long Hedges
+
+\begin{itemize}
+   \item A \textbf{long hedge} is one that involves a long futures position
+   \item[]
+   \item Long hedges are appropriate when the company knows it will be purchasing an asset at some time in the future
+   \item[]
+   \item Ex: An airline must purchase jet fuel and so uses a long futures position to lock-in the purchase price
+\end{itemize}
+
+
+# Section 3.2: Arguments For & Against Hedging
+
+## Arguments in Favor of Hedging
+
+\begin{itemize}
+   \item Companies should focus on the main business they are in and take steps to minimize risks arising from interest rates, exchange rates, and other market variables
+\end{itemize}
+
+
+## Arguments against Hedging
+
+\begin{itemize}
+   \item Shareholders are usually well diversified and can make their own hedging decisions
+   \item[]
+   \item It may increase risk to hedge when competitors do not
+   \item[]
+   \item Explaining a situation where there is a loss on the hedge and a gain on the underlying can be difficult
+      \begin{itemize}
+         \item \textit{Question:} Could the use of options change the scenario?
+      \end{itemize}
+\end{itemize}
+
+
+# Section 3.3 - Basis Risk
+
+## Are Perfect Hedges Too Good To Be True?
+
+In practice, hedging is not so straightforward. For at least these reasons:
+
+\begin{itemize}
+   \item[1.] The asset that requires hedging differs from the one underlying the futures contract
+   \item[]
+   \item[2.] Uncertainty over the date when the asset will be purchased or sold
+   \item[]
+   \item[3.] The hedge may require the futures contract to be closed prior to the delivery date
+\end{itemize}
+
+
+## Basis Risk
+
+The \textbf{basis} is defined as:
+
+$$\mbox{Basis} = \mbox{Spot price} - \mbox{Futures price}$$
+
+\vspace{3mm}
+
+\begin{itemize}
+   \item If the asset to be hedged and the underlying asset are identical then basis should be zero at expiration
+   \item But prior to expiration basis can be positive or negative
+\end{itemize}
+
+
+## Alternative Definition for Basis
+
+If we start with the basic forward pricing equation:
+
+$$
+F_{0,T} = S_{0}e^{(r - \delta) T}
+$$
+
+We can then divide both sides by $S_{0}$ and take logs:
+
+$$
+\underbrace{\ln{(F_{0,T})} - \ln{(S_{0})}}_{b_{t}} = (r - \delta) T 
+$$
+
+So that
+
+$$
+b_{t} = (r - \delta) T
+$$
+
+\textbf{\textit{NB:}} for commodity markets there will be other terms in $b_{t}$
+
+## Basis Continued
+
+\begin{itemize}
+   \item Basis is random over time
+      \begin{itemize}
+         \item An increase in basis is called a \textbf{strengthening of the basis}
+         \item A decrease in basis is called a \textbf{weakening of the basis}
+      \end{itemize}
+\end{itemize}
+
+![](images/OFOD9_03-01.eps)
+
+
+## Some Notation
+
+To examine the nature of basis risk we will use the following notation:
+
+\begin{itemize}
+   \item $S_{1}$: Spot price at time $t_{1}$
+   \item $S_{2}$: Spot price at time $t_{2}$
+   \item $F_{1}$: Futures price at time $t_{1}$
+   \item $F_{2}$: Futures price at time $t_{2}$
+   \item $b_{1}$: Basis at time $t_{1}$, that is $b_{1} = S_{1} - F_{1}$
+   \item $b_{2}$: Basis at time $t_{2}$, that is $b_{2} = S_{2} - F_{2}$
+\end{itemize}
+
+
+## An Example (Pages 59-60)
+
+\begin{itemize}
+   \item An airline will purchase 2 million gallons of jet fuel in one month and hedges using heating oil futures 
+   \item[]
+   \item From historical data:
+      \begin{itemize}
+         \item $\sigma_{F} = 0.0313$
+         \item $\sigma_{S} = 0.0263$
+         \item $\rho = 0.928$
+      \end{itemize}
+\end{itemize}
+
+$$
+h^{\ast} = 0.928 \ast \frac{0.0263}{0.0313} = 0.7777
+$$
+
+
+## Contract Size
+
+A key factor that affects the basis risk is the choice of contract, which has two components:
+
+\begin{itemize}
+   \item[1.] The choice of the asset underlying the futures contract
+      \begin{itemize}
+         \item It is rare that the underlying asset is identical to the asset being hedge
+         \item When it is not careful analysis is required to choose the contract
+      \end{itemize}
+   \item[]
+   \item[2.] The choice of the delivery months
+      \begin{itemize}
+         \item It is rare that the hedging timeline lines up with the delivery period
+         \item A rule of thumb is to choose a delivery month that is as close as possible, but later than, the hedging expiration
+      \end{itemize}
+\end{itemize}
+
+
+# Section 3.4 - Cross Hedging
+
+## Cross Hedging
+
+\begin{itemize}
+   \item \textbf{Cross hedging} is when the asset to be hedged differs from the underlying asset
+   \item[]
+   \item Ex: The airline which wishes to hedge jet fuel must choose a futures contract with a related underlying asset such as heating oil
+   \item[]
+   \item The \textbf{hedge ratio} is the ratio of the size of the position taken in futures to the size of the exposure
+      \begin{itemize}
+         \item If the asset to be hedged is identical to the underlying asset this is often $1$
+         \item When cross hedging this often the value that minimizes the variance of the hedged position
+      \end{itemize}
+\end{itemize}
+
+
+## Calculating the Minimum Variance Hedge Ratio
+
+The minimum variance hedge ratio depends on the relationship between changes in the spot price and changes in the futures price.
+
+Define:
+
+\begin{itemize}
+   \item $\Delta S$: the change in spot price $S$ during the life of the hedge
+   \item $\Delta F$: the change in futures price $F$ during the life of the hedge
+\end{itemize}
+
+We will denote the minimum variance hedge as $h^{\ast}$. The formula for $h^{\ast}$ is:
+
+$$h^{\ast} = \rho \frac{\sigma_{S}}{\sigma_{F}}$$
+
+Where:
+
+\begin{itemize}
+   \item $\sigma_{S}$ is the standard deviation of $\Delta S$
+   \item $\sigma_{F}$ is the standard deviation of $\Delta F$
+   \item $\rho$ is the correlation of the two
+\end{itemize}
+
+
+## The Optimal Number of Contracts
+
+To calculate the number of contracts that should be used in hedging, we define the following:
+
+\begin{itemize}
+   \item $Q_{A}$: Size of position being hedged (units)
+   \item $Q_{F}$: Size of one futures contract (units)
+   \item $N^{\ast}$: Optimal number of futures contracts for hedging
+\end{itemize}
+
+The futures contracts should be on $h^{\ast} Q_{A}$  units of the asset.
+
+The number of contracts is given by:
+
+$$N^{\ast} = \frac{h^{\ast} Q_{A}}{Q_{F}}$$
+
+
+## Tailing the Hedge
+
+\begin{itemize}
+   \item So far we have been treating futures as though they were forward contracts.
+   \item When we actually use futures it's like there are a series of daily hedges.
+   \item To reflect this we usually calculate the correlation between daily futures and spot prices
+\end{itemize}
+
+To do this we denote:
+
+\begin{itemize}
+   \item $\hat{\rho}$: the daily correlation between spot and futures prices
+   \item $\hat{\sigma_{S}}$: the daily standard deviation of the spot price
+   \item $\hat{\sigma_{F}}$: the daily standard deviation of the futures price
+\end{itemize}
+
+
+## Tailing the Hedge Continued
+
+\begin{itemize}
+   \item If $S$ and $F$ are the current spot and futures prices then the standard deviations of one-day prices changes are:
+      \begin{itemize}
+         \item $S\hat{\sigma_{S}}$
+         \item $F\hat{\sigma_{F}}$
+      \end{itemize}
+   \item[]
+   \item The one-day hedge ratio then becomes:
+\end{itemize}
+
+$$\hat{\rho}\frac{S\hat{\sigma_{S}}}{F\hat{\sigma_{F}}}$$
+
+
+## Tailing the Hedge Continued
+
+The number of contracts needed to hedge over the next day is:
+
+$$N^{\ast} = \hat{\rho} \frac{S\hat{\sigma_{S}} Q_{A}}{F\hat{\sigma_{F}} Q_{F}}$$
+
+Using this result is called *tailing the hedge*. We can write this as:
+
+$$N^{\ast} = \hat{h}\frac{V_{A}}{V_{F}}$$
+
+Where:
+
+\begin{itemize}
+   \item $V_{A} = S Q_{A}$: is the dollar value of the position being hedged
+   \item $V_{F} = F Q_{F}$: is the dollar of one futures contract
+   \item $\hat{h}$ is defined similarly to $h^{\ast}$ as:
+\end{itemize}
+
+$$\hat{h} = \hat{\rho}\frac{\hat{\sigma_{S}}}{\hat{\sigma_{F}}}$$
+
+
+## Tailing the Hedge Continued
+
+\begin{itemize}
+   \item It can be shown that a forward contract can be replicated by a dynamic trading strategy involving futures.
+   \item[]
+   \item The initial exposure from purchasing a forward contract with maturity at date $T$ is equivalent to the
+   exposure of $P(0,T) = e^{rT}$ futures where $r$ is the risk-free interest rate.
+   \item[]
+   \item The adjustment of the hedge ratio from $1$ to the lower value $P(0,T)$ is the tailed position.
+   \item[]
+   \item Tailing the hedge makes more of a difference the further into the future the maturity date $T$ is.
+\end{itemize}
+
+
+## Tailing the Hedge Continued
+
+In theory this suggests that we should change the futures position every day to reflect the latest
+values of $V_{A}$ and $V_{F}$. In practice, day-to-day changes in the hedge are very small and
+usually ignored.
+
+\vspace{3mm}
+
+Later we will explore dynamic hedging strategies. Is it possible to beat a static hedge?
+
+
+# Section 3.5 - Stock Index Futures
+
+## Stock Index Futures
+
+\begin{itemize}
+   \item We can use stock index futures to hedge exposures to equity prices.
+   \item[]
+   \item A \textbf{stock index} Commodity Futures and Forwards tracks changes in the value of a hypothetical portfolio of stocks.
+   \item[]
+   \item Weights for particular stocks in the portfolio equal the proportion in the hypothetical index.
+\end{itemize}
+
+
+## Stock Indices
+
+\textbf{Table 3.3} shows futures prices for contracts on $3$ different stock Indices
+as of May 14, 2013.
+
+![](images/Table3-3.png)
+
+
+## Stock Indices Continued
+
+\begin{itemize}
+   \item The \textit{Dow Jones Industrial Average} is based on a portfolio consisting of $30$ blue-chip stocks.
+	   \begin{itemize}
+         \item Weights are proportional to prices
+         \item CME trades two contracts based on the index:
+            \begin{itemize}
+               \item one that is $\$10$ times the index
+               \item one that is $\$5$ time the index (the Mini)
+            \end{itemize}
+      \end{itemize}
+   \item[]
+   \item The \textit{Standard and Poor's 500 Index} (SP500) is based on a portfolio of $500$
+      \begin{itemize}
+         \item $400$ Industrials
+         \item $40$ utilities
+         \item $20$ transportation Companies
+         \item $40$ financial institutions
+         \item Two contracts trade on the SP500:
+            \begin{itemize}
+               \item one that is $\$250$ times the index
+               \item one that is $\$50$ times the index (the Mini)
+            \end{itemize}
+      \end{itemize}
+\end{itemize}
+
+
+## Stock Indices Continued
+
+\begin{itemize}
+   \item The \textit{Nasdaq-100} is based on $100$ stocks using the NASDAQ
+      \begin{itemize}
+         \item Two contracts traded:
+            \begin{itemize}
+               \item one that is $\$100$ times the index
+               \item one that is $\$20$ times the index (the Mini)
+            \end{itemize}
+      \end{itemize}
+\end{itemize}
+
+As mentioned in chapter 2, futures contracts on stock indices are cash settled.
+
+\begin{itemize}
+   \item Contracts are marked-to-market either on the opening or closing price of the index on the last trading day
+      \begin{itemize}
+         \item Ex: the SP500 contracts are closed out at the opening price of the index on $3^{rd}$ Friday of the delivery month.
+      \end{itemize}
+\end{itemize}
+
+
+## Hedging and Equity Portfolio
+
+Stock index futures can be used to hedge well-diversified equity portfolios that tracks
+one of the indices.
+
+Define:
+
+\begin{itemize}
+   \item $V_{A}$ : the current value of the portfolios
+   \item $V_{F}$ : the current value of one futures contract (the futures price times the contract size)
+\end{itemize}
+
+
+## Hedging and Equity Portfolio Continued
+
+If we assume the hedge ratio to be $1.0$ then the number of futures contracts to
+be shorted is:
+
+$$N^{\ast} = \frac{V_{A}}{V_{F}}$$
+
+Suppose that a portfolio valued at $\$5,050,000$ tracks the SP500. Also:
+
+\begin{itemize}
+   \item The index is $1,010$ and each futures is on $\$250$ times the index
+   \item $V_{A} = 5,050,000$
+   \item $V_{F} = 250 \times 1010 = 252,500$
+   \item This means we need $20$ futures contracts (short) to hedge the exposure
+\end{itemize}
+
+
+## Hedging and Equity Portfolio Using the CAPM
+
+\begin{itemize}
+   \item When the portfolio does not track the index we can use the CAPM (see appendix to chapter 3).
+   \item[]
+   \item The key parameter from the CAPM is the $\beta$:
+      \begin{itemize}
+         \item When $\beta = 1.0$ the portfolio tracks the index
+         \item When $\beta = 2.0$ the return on the portfolio tends to be twice the index
+         \item  When $\beta = 0.5$ the return on the portfolio tends to be half the index
+      \end{itemize}
+   \item[]
+   \item A portfolio with $\beta = 2.0$ is twice as sensitive to movements in the index as a portfolio with $\beta = 1.0$
+      \begin{itemize}
+         \item  So we need to use twice as many futures contracts, etc
+      \end{itemize}
+\end{itemize}
+
+
+## Hedging and Equity Portfolio Using the CAPM
+
+Using the CAPM $\beta$ the new hedge ratio becomes:
+
+$$N^{\ast} = \beta \frac{V_{A}}{V_{F}}$$
+
+\begin{itemize}
+   \item This assumes that $\hat{h} = \beta$, unsurprisingly
+\end{itemize}
+
+
+## Hedging and Equity Portfolio Using the CAPM
+
+Assume the following:
+
+\begin{itemize}
+   \item The value of the SP500 index is $= 1,000$
+   \item[]
+   \item The nearby SP500 futures price is $= 1,010$
+   \item[]
+   \item The value of the portfolio $=\$5,050,000$
+   \item[]
+   \item The risk-free rate is $r = 4\%$ per annum
+   \item[]
+   \item The dividend yield on the index is $= 1\%$ per annum
+   \item[]
+   \item The portfolio beta is $\beta = 1.5$
+   \item[]
+   \item One contract is for $\$250$ times the index
+\end{itemize}
+
+
+## Hedging and Equity Portfolio Using the CAPM
+
+\begin{itemize}
+   \item $V_{F} = 252,500$ as before
+\end{itemize}
+
+Using the CAPM we get the following optimal hedge ratio:
+
+$$1.5 \times \frac{5,050,000}{252,500} = 30$$
+
+Suppose the index turns out to be $900$ in $3$ months, and the futures price is
+$902$. The gain from the short futures position is then:
+
+$$30 \times (1010 - 902) \times 250 = \$810,000$$
+
+
+## Hedging and Equity Portfolio Using the CAPM
+
+\begin{itemize}
+   \item The loss on the index is $10\%$
+   \item The index pays a dividend of $0.25\%$ per $3$ months
+   \item Thus an investor would have earned a return of $-9.75\%$
+\end{itemize}
+
+By the CAPM we see that
+
+$$1.0 + [1.5 \times (-9.75 - 1.0)] = -15.125$$
+
+
+## Hedging and Equity Portfolio Using the CAPM
+
+The expected value of the portfolio at the end of $3$ months is:
+
+$$\$5,050,000 \times (1 - 0.15125) = \$4,286,187$$
+
+\vspace{3mm}
+
+The expected value of the hedged position is then:
+
+$$\$4,286,187 + \$810,000 = \$5,096,187$$
+
+
+## Changing the beta of the Portfolio
+
+In this example above the $\beta$ of the portfolio was changed to $\beta = 0.0$. In general,
+to change from a portfolio beta of $\beta$ to $\beta^{\ast}$, where $\beta > \beta^{ast}$,
+a short position in:
+
+$$(\beta - \beta^{\ast}) \frac{V_{A}}{V_{Q}}$$
+
+is required. When $\beta^{\ast} > \beta$, a long position is required:
+
+$$(\beta^{\ast} - \beta) \frac{V_{A}}{V_{Q}}$$
+
+
+# Section 3.6 - Stack & Roll
+
+## The Stack and Roll
+
+\begin{itemize}
+   \item Sometimes the expiration date of a hedge is later than the delivery dates of available futures contracts
+   \item[]
+   \item The hedger must then \textit{roll the hedge} forward by closing out the original position and taking a new one
+   \item[]
+   \item Hedges can be rolled forward many times in a procedure known as the \textbf{stack and roll}
+\end{itemize}
+
+
+## The Stack and Roll
+
+\begin{itemize}
+   \item Time $t_{1}$: Short futures contract 1
+   \item[]
+   \item Time $t_{2}$: Close out futures position 1, short futures contract 2
+   \item[]
+   \item Time $t_{3}$: Close out futures position 2, short futures contract 3
+   \item[]
+   \item Time $t_{n-1}$: Close out futures position $n-1$, short futures contract $n$
+   \item[]
+   \item Time $t_{n}$: Close out futures contract $n$
+\end{itemize}
+
+
+# Appendix: Culp \& Miller on \textit{Hedging a Flow of Commodity Deliveries with Futures}
+
+## Culp \& Miller - Hedging a Flow of Commodity Deliveries with Futures 
+
+\begin{itemize}
+   \item Beginning in Decemember of 1991 MGRM offered long-term delivery contracts on petroleum products
+   \item These contracts obligated MGRM to make monthly delieveries on heating oil and gasoline for up to 10 years at fixed prices.
+   \item MGRM was thus operating as a commodity swap dealer offering fixed-for-floating contracts. 
+      \begin{itemize}
+         \item MGRM offered fixed prices, but faced floating prices
+         \item This exposed MGRM to the risk that oil prices would rise
+      \end{itemize}
+   \item MGRM hedged part of their price risk with futures contracts.
+   \item In 1993 MGRM prematurely liquidated its hedge position leading to a reported loss of $\$1.33$ billion.
+\end{itemize}
+
+
+## Managing the Market Risk of a Commodity Flow
+
+\begin{itemize}
+   \item By Nov. 1993 MGRM had committed to deliver at fixed prices the equivalent of 160 million bbls. of crude oil (in the form of refined products)
+   \item[]
+   \item MGRM chose to hedge at least part of their price risk with short-term futures contracts traded on the NYMEX exchange 
+      \begin{itemize}
+         \item NYMEX is not owned and operated by the CME Group. 
+         \item See \url{cmegroup.com/company/nymex.html}
+      \end{itemize}
+   \item[]
+   \item Most of MGRM's positions were in one-month futures based on unleaded gasoline nad No. 2 heating oil.
+   \item[]
+   \item Some were in West Texas Intermediate (WTI) crude oil.
+\end{itemize}
+
+
+## MGRM's Stack-and-Roll Strategy
+
+\begin{itemize}
+   \item It turns out that a firm \textit{can} hedge its long-term exposure (MGRM's were up to 10 years) to oil price increases
+         using short-dated futures contracts of only one month to maturity. 
+   \item[]
+   \item This strategy is known as \textbf{stack-and-roll}.
+   \item[]
+   \item The strategy calls for purchasing futures equivalent to the entire remaining obligation on its flow contracts.
+\end{itemize}
+
+
+## MGRM's Stack-and-Roll Strategy Continued
+
+\begin{itemize}
+   \item On the first delivery date (first month of the contract) it buys for delivery in the spot market
+   \item[]
+   \item Offsets all of its maturing contracts, and re-establishes a long position in the next front-month futures contracts
+   \item[]
+   \item This new position is reduced by the amount of the commodity that has just been delivered 
+   \item[]
+   \item The hedger procedes stacking and rolling its hedge in this matter for the life of the long-term contract.
+\end{itemize}
+
+
+## Example of a Simple Stack-and-Roll Hedge
+
+![](images/Stack-and-Roll-Hedge.jpg)
+
+
+## Example of a Simple Strip Hedge
+
+![](images/Strip-Hedge.jpg)
