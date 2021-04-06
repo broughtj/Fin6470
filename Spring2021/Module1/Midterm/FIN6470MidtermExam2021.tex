@@ -1,0 +1,202 @@
+\documentclass[12pt]{article}
+
+\setlength{\parindent}{0in}
+
+\usepackage[margin=1.0in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{array,multirow}
+\usepackage{tikz}
+\usepackage{url}
+
+\begin{document}
+
+Finance 6470: Derivatives Markets           \\
+Spring Semester 2021                        \\
+Midterm Take-Home Exam                      \\
+Due Date: April 24, 2021 at 12:00 Midnight  \\
+
+\vspace{15mm}
+
+\section*{Part I}
+
+This exam is a case study on the company Metallgesellschaft Refining and Marketing (MGRM), which was an American subsidiary of a
+German conglomerate. MGRM was an energy commodity merchant who employed a very interesting hedging strategy to develop innovative
+long-term contracting structures for heating oil and natural gas deliveries. In 1993 the firm suffered losses totalling nearly 
+$\$1.3$ billion. In the aftermath of their massive default there were many academic studies that tried to uncover the reason for their 
+historic failure. In this midterm you are asked to examine some of that evidence and to employ the tools of arbitrage reasoning that we
+have developed in the course to sort out the issues.
+
+\vspace{10mm}
+
+Please start by reading the paper \textit{Metallgesellschaft and the Economics of Synthetic Storage} by Culp and Miller. Culp and Miller
+take a contrarian stance relative to the vast majority of academic studies focusing on MGRM. Most academic studies were highly critical of
+MGRM. There were many facets to the saga, but there were two factors that stood out as major points on which MGRM were roundly criticized: 
+1) they used a stack-and-roll hedging strategy with a 1-for-1 hedge ratio, and 2) they mismanaged their credit worthiness and suffered
+financial distress. As you will see, Culp and Miller defend their hedging strategy as fundamentally sound and note that it would be nearly
+impossible to see MGRM's failure as a result of financial distress. 
+
+\vspace{10mm}
+
+Next, please read the paper \textit{Maturity Structure of a Hedge Matters: Lessons from the Metallgesellschaft Debacle} by Mello and Parsons.
+Mello and Parsons criticize MGRM for not properly hedging with a minimum-variance hedging strategy, and especially for not matching the maturity
+structure of the physical deliverable leg of their strategy with their financial hedge in futures contracts. That is, for not using a strip 
+hedging strategy in place of the stack-and-roll strategy that they did employ. In other words, MGRM held long-term obligations, but only short-term
+hedging instruments and they were simply mismatched.
+
+\vspace{10mm}
+
+Culp and Miller give a rebuttal in their paper \textit{Hedging in the Theory of Corporate Finance: A Reply to Our Critics}. In their reply, they
+cite the work of the economist Holbrook Working who was a pioneering scholar in futures market research. Together with Culp and Miller's reply, 
+please also read the paper \textit{Futures Trading and Hedging} as well as the paper \textit{New Concepts Concerning Futures Markets and Prices}
+by Working as background to this debate. 
+
+\vspace{10mm}
+
+When you have completed the above readings and made appropriate notes, please answer the following questions.
+
+\vspace{10mm}
+
+\textbf{Question 1.} Culp \& Miller referred to MGMR's hedging as \textbf{\textit{synthetic storage}}. Please outline the basics of this
+		type of hedging strategy, and explain how it differs from risk minimizing hedging. In your explanation, you will want to refer to the concepts
+		outlined by Holbrook Working regarding the possible different motives for hedging and how that can affect the hedging strategy that is used. 
+
+\vspace{10mm}
+
+\textbf{Question 2.} Why did MGRM employ a dynamic stack-and-roll hedging strategy rather than a more static strip hedge? What were the main factors
+       that determined the structure of MGRM's hedging strategy? 
+
+\vspace{10mm}
+
+\textbf{Question 3.} Culp \& Miller essentially see MGRM as an entrepreneurial market-making firm engaged in dynamic creative arbitrage. Outline a case
+       to support this contention using the scholarship that we have examined from F.A. Hayek, James Buchanan and Frank Knight. You may also use any of
+	   the references that we have used so far in the course such as the historical work of Jeffrey Williams or our textbook. Feel free, of course, also
+	   to cite your own novel resources. 
+
+
+\vspace{10mm}
+
+You may also find the brief review paper titled \textit{Hedging a Flow of Commodity Deliveries with Futures: Lessons from Metallgesellschaft} also by
+Culp and Miller.
+
+\newpage
+
+\vspace{15mm}
+
+\section*{Part II}
+
+Next, please read the paper \textit{Metallgesellschaft: A Prudent Hedger Ruined, or a Wildcatter on NYMEX?} by Craig Pirrong. Similar to Mello and Parsons,
+Pirrong criticizes MGRM's hedging strategy for deviating from the risk-minimizing standard hedge of neoclassical financial theory. Pirrong concedes that
+there was a necessity for a dynamic trading strategy (why did he do that?), but suggests that MGRM was actually increasing their risk exposure with their
+1-for-1 hedge ratio between spot and futures. Pirrong develops a very technically sophisticated econometric model called \textbf{\textit{backwardation-adjusted GARCH}}
+to statistically estimate a time-varying minimum-variance hedge ratio. He finds that MGRM were actually massively over-hedged and by doing so were loading up on 
+additional risk instead of mitigating it. You will be asked to assess the empirical findings of Pirrong and how they contribute to the debate.
+
+\vspace{8mm}
+
+\textbf{Note:} I do expect you to understand the basic reasoning of Pirrong's model, but not the nitty-gritty technical details. Notes will be given in class 
+and as supporting material here to facilitate this understanding. It would be very easy to get overwhelmed with technical detail when reading Pirrong. Instead,
+read the paper with the idea of capturing the salient features of his argument while leaving aside the mathematical technicalities. However, if you are inclined
+feel free to engage the mathematical and econometric details if you feel it will aid your understanding and arguments.
+
+\vspace{10mm}
+
+Next, read the paper \textit{Simulating Supply} by Bollen and Whaley. Bollen and Whaley take the argument of Culp and Miller at face value and contribute
+additional empirical evidence. They employ a parametric Monte Carlo econometric model (though one simpler than Pirrong's) to conduct a counter-factual 
+simulation study of what might have happened had MGRM's hedging strategy been left in place for the duration of their committed contracts. They find the following:
+
+\begin{quote}
+	\textit{We...calculate what MGR\&M's cash position would have been at the end of March 1997 had the programme been fully funded and left in place. We find that the 
+	programme would have earned in excess of $\$1.1$ billion, covering even the most pessimistic accounts of the losses sustained from MGR\&M's programme.}
+\end{quote}
+
+\vspace{10mm}
+
+When you have read these papers and made appropriate notes, please answer the following questions.
+
+\vspace{10mm}
+
+\textbf{Question 4.} One of the main points of disagreement between Culp \& Miller and their critics, especially Pirrong, is over the proper hedge ratio for MGRM. 
+Had you been the Senior Quantitative Analyst in charge of determining MGRM's strategy, what hedging strategy would have employed? Can you outline a procedure for
+determining the appropriate hedging strategy? Explain. 
+
+\vspace{8mm}
+
+\textbf{Note:} Basically, this question is asking you to compare and contrast the neoclassical theory of hedging with Holbrook Working's carrying-charge hedging. Though,
+you should feel completely free to add your own novel take on the problem.
+
+\vspace{10mm}
+
+\textbf{Question 5.} Compare Pirrong's empirical evidence with the evidence presented by Bollen and Whaley. Is the evidence in the two papers consistent? If not, why not?
+Which one do you find most persuades you? In your answers please refer to the Kennedy and Speed readings, which will help you understand and critique the methodology of 
+Bollen and Whaley. 
+
+\vspace{10mm}
+
+\textbf{Question 6.} Energy markets such as the oil market are often historically characterized by backwardation, but have had long periods of contango. Does this matter
+for MGRM's synthetic storage strategy? Explain.
+
+\vspace{10mm}
+
+\textbf{Question 7.} At the end of Pirrong's paper, he states \textit{"Given the huge losses incurred in late 1993, a Bayesian estimating the probability distribution of 
+MG's information advantage would almost certainly place little weight on the possibility that the firm was well informed, and great weight on the possibility that it did
+not possess superior information, regardless of the charitability of his priors concerning the prescience of MG's managers."} Why do you think Pirrong invokes Bayes's Rule
+in his concluding statement? (He did not use Bayesian methods to estimate his model) Comment on this statement by Pirrong. Are you convinced by Pirrong's argument? Explain.
+In your answer cite the Terrance Speed reading which mentions "not needing to be Bayesian, but only approximately so" (paraphrasing). Bollen and Whaley make no direct reference to Bayes's
+Rule. Can their evidence be seen as approximately Bayesian? Compare the Bayesian-ness of the Pirrong and Bollen \& Whaley approaches? (\textit{Hint:} do either of these papers
+use a predictive distribution or something akin to it?)
+
+\newpage
+
+\section*{Part III}
+
+\textbf{Question 8.} In this problem you will simulate values for spot prices and basis for heating oil
+            and gasoline following the models of Bollen and Whaley in their paper \textit{Simulating Supply} 
+			(which is in the readings file). Specifically, the following models will be used:
+
+ \vspace{5mm}
+ \textbf{Spot Prices:}
+ \begin{itemize}
+  \item $\ln{\left(S_{i,t} / S_{i,t-1}\right)} = \alpha_{i} (\beta_{i} - S_{i,t-1}) + \varepsilon_{i,t} \quad
+	  \mbox{for} \quad i = 1, 2$
+  \item[]
+  \item where $i=1$ for heating oil and $i=2$ for gasoline, and $(\varepsilon_{1,t}, \varepsilon_{2,t}) \sim BVN(0,
+	  \sigma_{1}^{2}, 0, \sigma_{2}^{2}, \rho)$. And $\rho$ is the correlation coefficient between heating oil and gas spot returns. 
+ \end{itemize}
+
+ \vspace{3mm}
+ \textbf{Basis and Futures Prices:}
+ \begin{itemize}
+  \item $b_{i,t} = \alpha_{i} b_{i,t-1} + \beta_{i} S_{i,t-1} + \varepsilon_{i,t} \quad \mbox{for} \quad i =
+	  1,2$
+  \item[]
+  \item where again, $i = 1$ for heating oil and $i = 2$ for gasoline and $(\varepsilon_{1,t}, \varepsilon_{2,t}) \sim
+	      BVN(0, \sigma_{1}^{2}, 0, \sigma_{2}^{2}, \rho)$. Again, $\rho$ is the correlation between heating oil and
+		  gasoline basis. 
+  \item[]
+  \item You can then obtain simulated futures prices as $F_{i,t} = S_{i,t}e^{b_{i,t}}$ for $i = 1,2$
+ \end{itemize}
+
+ \vspace{5mm}
+ With this as background, do the following:
+
+ \begin{itemize}
+  \item[(a)] Simulate 60 days of prices for spot and daily settlement prices for futures (via the basis equation).
+	         Looking at figure $1$ in the paper use initial values of $\$0.69$ for heating oil and $\$0.80$ for
+			 gasoline. Use an initial value for heating oil basis of $-0.02$ and $-0.01$ for gasoline.
+			 See Table $2$ in the paper for the other parameter values. 
+  \item[(b)] Make time series plots labeling the x-axis as date and the y-axis as dollar prices. Assume a starting date
+	         of November 15, 1991. Plot spot prices, basis, and futures prices separately but combining the graphs for 
+			 heating oil and gasoline together for each. Clearly label the series in each graph. 
+  \item[(c)] For the simulated 60-day period calculate the market-to-market cash flows. Assume an initial margin
+	         of $10\%$ and variation margin of $85\%$ of the initial margin. Assume a position of 1 contract for each
+			 position.
+  \item[(d)] For the simulated 60-day period calculate a minimum-variance hedge ratio for both heating oil and unleaded
+	         gasoline.
+ \end{itemize}
+
+
+\end{document}
